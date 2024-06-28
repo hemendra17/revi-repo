@@ -1,0 +1,71 @@
+.baloon-item {
+	position: absolute;
+	box-sizing: border-box;
+	min-height: 42px;
+	border-radius: 10px;
+	background-color: #2020df;
+	padding: 10px;
+	transition: .2s all;
+	display: inline-block;
+}
+
+.baloon-visible {
+	transition: .2s all .2s ease-in;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.baloon-hidden {
+	transition: .2s all .2s ease-in;
+	opacity: 0;
+	transform: scale(3);
+}
+
+.baloon-item-text {
+	color: #fefefe;
+	text-align: center;
+	font-family: PoppinsBold;
+	font-size: 20px;
+	line-height: 24px;
+	position: relative;
+	z-index: 2;
+}
+
+.baloon-item::after {
+	content: '';
+	z-index: 1;
+	position: absolute;
+	border-top: 20px solid #2020df;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+
+/* TAIL */
+.baloon-item.baloon-left-top::after {
+	left: 0;
+	top: -10px;
+	transform: rotate(-90deg);
+}
+.baloon-item.baloon-left-bottom::after {
+	left: 0;
+	bottom: -10px;
+	transform: rotate(-90deg);
+}
+.baloon-item.baloon-right-top::after {
+	right: 0;
+	top: -10px;
+	transform: rotate(90deg);
+}
+.baloon-item.baloon-right-bottom::after {
+	right: 0;
+	bottom: -10px;
+	transform: rotate(90deg);
+}
+
+@keyframes balloon-typed-anim {
+	0% { opacity: 1;}
+	15% { opacity: 0.5;}
+	33% { opacity: 1;}
+	100% { opacity: 1;}
+}

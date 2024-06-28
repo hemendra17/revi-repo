@@ -1,0 +1,85 @@
+.sticky-manual,
+.sticky-menu {
+	position: relative;
+	top: 60px;
+	height: 110px;
+	z-index: 1000;
+	padding: 0;
+	/*box-shadow: 0 3px 5px #333;*/
+	background-color: #eaeaea;
+	border: 1px solid #ff4f21;
+	transition: .1s 0s all;
+}
+
+/*JS-based */
+.sticky-manual {
+	top: 0;
+	transition: .2s all;
+}
+
+.sticky-wrap {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	color: #eaeaea;
+	position: relative;
+}
+
+/*mobile =  align to left*/
+.mobile .sticky-wrap {
+	justify-content: flex-start;
+}
+
+
+.sticky-menu-narrow {
+	height: 27px;
+	top: 60px;
+	width: 100%;
+	position: fixed;
+}
+
+.sticky-menu-item {
+	width: 228px;
+	height: 100%;
+	border-left: 1px solid #ff4f21;
+	color: #ff4f21;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: PoppinsRegular;
+	width: 180px;
+	transition: .1s all;
+	cursor: pointer;
+}
+.sticky-menu-item:last-of-type {
+	border-right: 1px solid #ff4f21;
+}
+
+.sticky-menu-item.active {
+	color: #eaeaea;
+	background-color: #ff4f21;
+	transition: .1s all;
+	cursor: default;
+}
+
+/*MOBILE*/
+.mobile .sticky-manual,
+.mobile .sticky-menu {
+	height: 84px;
+}
+
+.mobile .sticky-wrap {
+	transition: .3s all;
+}
+
+.mobile .sticky-menu-item {
+	min-width: 255px;
+	font-size: 18px;
+}
+
+.menu-fix {
+	top: 60px;
+	position: fixed;
+	transition: .2s all;
+	height: 48px !important;
+}

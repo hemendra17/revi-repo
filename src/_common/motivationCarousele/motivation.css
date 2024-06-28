@@ -1,0 +1,82 @@
+.motivation-carousele {
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #000b62;
+	color: #fefefe;
+	min-height: 761px;
+}
+
+.motivation-carousele-header {
+	/*width: 1062px;*/
+	margin-bottom: 45px;
+
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 175px;
+	padding: 0 30px;
+}
+
+.motivation-carousele-owner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 42px;
+}
+
+.motivation-carousele-owner-logo {
+	margin-right: 13px;
+}
+
+.motivation-carousele-owner-logo-image {
+	width: 74px;
+	height: 74px;
+	border-radius: 50%;
+	box-shadow: 0 0 3px #777;	
+}
+
+.motivation-carousele-owner-titles {
+	align-items: flex-start !important;
+}
+
+.motivation-carousele-owner-titles-name {
+	font-family: ObjectSansBold;
+	font-size: 20px;
+}
+.motivation-carousele-owner-titles-cafe {
+	font-family: PoppinsSemibold;
+	font-size: 16px;
+}
+
+/*slider*/
+.motivation-carousele-slider {
+	padding-bottom: 100px;
+	width: 100%;
+}
+
+.motivation-carousele-slider-image {
+	border-radius: 10px;
+}
+
+/*only for mobile version*/
+.motivation-carousele-slider-comment {
+	width: 100%;
+	/*text-align: center;*/
+	min-height: 46px;
+	padding: 30px 20px 0 20px;
+	box-sizing: border-box;
+	color: #fefefe;
+	font-size: 16px;
+	font-family: PoppinsSemibold;
+
+	text-align: justify;
+	white-space: normal;
+}
+
+/*MOBILE*/
+.mobile .motivation-carousele-header{
+	padding: 0; 
+}
+.mobile .motivation-carousele-slider {
+	height: 470px;
+	padding-bottom: 0;
+}

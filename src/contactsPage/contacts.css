@@ -1,0 +1,95 @@
+.contacts-page {
+	display: flex;
+	flex-direction: column;
+	font-family: ObjectSansBold;
+}
+
+.contacts-top {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+/*TOP*/
+
+.contacts-top {
+	min-height: 753px;
+	box-sizing: border-box;
+	padding: 233px 0 100px 0;
+	background-color: #eaeaea;
+	color: #ff4f21;
+}
+
+/*top inner*/
+.contacts-top-hello {
+	font-size: 90px;
+	text-align: center;
+	line-height: 95px;
+	color: #ff4f21;
+	margin-bottom: 104px;
+}
+
+.contacts-top-cards {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.contacts-top-cards-item {
+	width: 317px;
+	height: 180px;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px #999;
+	margin: 0 42px;
+	background-color: #f5f5f5;
+	color: #ff4f21;
+	box-sizing: border-box;
+	padding: 25px 10px 0 65px;
+	background-repeat: no-repeat;
+	background-position: 18px 28px;
+	background-size: 32px 32px;
+}
+
+.contacts-top-cards-item-title {
+	font-size: 26px;
+	padding-bottom: 10px;
+}
+
+.contacts-top-cards-item-comment {
+	font-family: PoppinsSemibold;
+	font-size: 13px;
+	padding-bottom: 10px;
+}
+
+.contacts-top-cards-item-email {
+	font-family: PoppinsBold;
+	font-size: 13px;
+	text-decoration: underline;
+}
+
+/* MOBILE */
+.mobile .contacts-top {
+	padding-top: 134px;
+	padding-bottom: 41px;
+}
+
+.mobile .contacts-top-hello {
+	font-size: 37px;
+	line-height: 46px;
+	margin-bottom: 50px;
+}
+
+.mobile .contacts-top-cards {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.mobile .contacts-top-cards-item {
+	padding: 63px 24px 20px 24px;
+	text-align: center;
+	background-position: center 18px;
+	width: 350px;
+	height: 200px;
+	margin-bottom: 10px;
+}

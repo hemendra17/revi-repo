@@ -1,0 +1,76 @@
+.micro {
+	width: 100%;
+	box-sizing: border-box;
+	color: #ff4f21;
+	padding-top: 140px;
+}
+
+.micro-title {
+	text-align: center;
+	padding-bottom: 26px;
+}
+
+.micro-comment {
+	padding-bottom: 42px;
+}
+
+.micro-card-body {
+	border-radius: 10px;
+	background-color: #f5f5f5;
+	height: 508px;
+	width: 609px;
+}
+
+.micro .card-slider {
+	padding-left: 5px;
+}
+
+.micro .card-slider-card-wrap {
+	border-radius: 10px;
+	box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.micro-card-body-hidden {
+	width: 100%;
+	padding: 33px 31px;
+	box-sizing: border-box;
+	font-family: ObjectSansBold;
+	font-size: 50px;
+}
+
+.micro-card-body-hidden.to-right {
+	text-align: right;
+}
+.micro-card-body-hidden.to-left {
+	text-align: left;
+}
+
+.micro-card-body-prim {
+	text-align: center;
+	box-sizing: border-box;
+	padding: 35px;
+}
+
+.micro-card-body-prim-header {
+	margin-bottom: 20px;
+}
+
+.micro-card-body-prim-image {
+	border-radius: 10px;
+	margin-bottom: 10px;
+	width: 525px;
+	height: 199px;
+}
+
+.micro-card-body-prim-comment {
+	width: 100%;
+	box-sizing: border-box;
+	font-family: PoppinsRegular;
+	white-space: normal;
+}
+
+.micro-card-body-prim-comment b {
+	font-family: PoppinsBold;
+}
+
+/*MOBILE - NO mobile view!*/

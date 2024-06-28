@@ -1,0 +1,90 @@
+.app-page-share-prev {
+	height: 257px;
+}
+
+.app-page-share {
+	height: 1033px;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.app-page-share-logo {
+	width: 65px;
+	height: 65px;
+	background-color: #ff4f21;
+	border-radius: 50%;
+	line-height: 98px;
+}
+
+.app-page-share-header {
+	margin-top: 40px;
+	font-size: 50px;
+	line-height: 58px;
+	font-family: ObjectSansBold;
+	min-height: 58px;
+	max-width: 930px;
+	text-align: center;
+	color: #fefefe;
+}
+
+.app-page-share-comment {
+	font-family: PoppinsSemibold;
+	text-align: center;
+	min-height: 75px;
+	width: 630px;
+	color: #eaeaea;
+	font-size: 18px;
+	margin-bottom: 120px;
+	margin-top: 40px;
+}
+
+.app-page-share .happy-friends {
+	padding-top: 0;
+}
+
+.app-page-share-balloons {
+	position: relative;
+	text-align: left;
+	z-index: 999;
+	display: block;
+	width: 1366px;
+}
+
+/*MOBILE VERSION*/
+.mobile .app-page-share-prev {
+	display: none;
+}
+
+.mobile .app-page-share {
+	padding-top: 130px;
+	height: 1150px;
+}
+
+.mobile .app-page-share-logo {
+	width: 55px;
+	height: 55px;
+	line-height: 80px;
+}
+
+.mobile .app-page-share-logo img {
+	width: 37px;
+	height: 37px;
+}
+
+.mobile .app-page-share-header {
+	font-size: 42px;
+	line-height: 46px;
+	max-width: 350px;
+	min-height: 138px;
+}
+
+.mobile .app-page-share-comment {
+	width: 350px;
+	font-size: 16px;
+	margin-bottom: 120px;
+}

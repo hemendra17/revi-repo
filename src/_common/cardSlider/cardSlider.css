@@ -1,0 +1,96 @@
+.card-slider-wrap {
+	position: relative;
+	width: 100%;
+}
+
+.card-slider {
+	width: auto;
+	box-sizing: border-box;
+	position: relative;
+	min-height: 25px;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: .2s all;
+}
+
+.card-slider-card-wrap {
+	display: inline-block;
+	z-index: 0;
+	position: relative;
+	transition: .3s all;
+}
+
+/*Card silder switcher*/
+.card-slider-switcher {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;	
+}
+
+.card-slider-point {
+	width: 10px;
+	height: 10px;
+	margin: 10px;
+	border-radius: 50%;
+	background-color: #fefefe;
+}
+.card-slider-point.active {
+	background-color: #ff4f21;
+}
+
+/*slider switch buttons*/
+.card-slider-btn {
+	--len: 15px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: calc(50% - 35px);
+	background-color: #ff4f21;
+	border-radius: 50%;
+	z-index: 999999;
+	cursor: pointer;
+}
+
+.card-slider-btn::before,
+.card-slider-btn::after {
+	content: '';
+	position: absolute;
+	left: calc(50% - 5px);
+	top: calc(50% - var(--len));
+	z-index: 1;
+	border-left: var(--len) solid #fefefe;
+	border-right: var(--len) solid transparent;
+	border-top: var(--len) solid transparent;
+	border-bottom: var(--len) solid transparent;
+}
+
+.card-slider-btn::after {
+	left: calc(50% - 8px);
+	z-index: 2;
+	border-left: var(--len) solid #ff4f21;
+}
+
+.card-slider-btn-left {
+	left: 40px;
+	transform: rotate(180deg);
+}
+
+.card-slider-btn-right {
+	right: 40px;
+}
+
+/*mobile*/
+.mobile .card-slider-btn {
+	width: 50px;
+	height: 50px;
+}
+
+.mobile .card-slider-btn-left {
+	left: 10px;
+}
+
+.mobile .card-slider-btn-right {
+	right: 10px;
+}

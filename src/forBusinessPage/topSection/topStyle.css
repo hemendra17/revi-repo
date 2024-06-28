@@ -1,0 +1,123 @@
+.for-business-page-hereToDrive {
+	height: 770px;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #eaeaea;
+	position: relative;
+	z-index: 1;
+}
+
+.for-business-page-hereToDrive-top {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 150px 0 0 0;	
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #eaeaea;
+	z-index: 2;
+}
+
+.for-business-page-hereToDrive-top::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -74px;
+	width: 100%;
+	height: 75px;
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	background-color: #eaeaea;
+	box-sizing: border-box;
+}
+
+.for-business-page-hereToDrive-top-header {
+	width: 842px;
+	min-height: 150px;
+	padding: 0;
+	color: #ff4f21;
+	padding-bottom: 40px;
+}
+
+.for-business-page-hereToDrive-top-comment {
+	padding-bottom: 45px;
+}
+
+.for-business-page-hereToDrive-top-buttons {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+
+.for-business-page-hereToDrive-top-buttons div {
+	display: inline-block;
+}
+
+
+.for-business-page-hereToDrive-top-buttons .revi-button,
+.for-business-page-hereToDrive-top-buttons .revi-button-white {
+	margin: 0 5px;
+}
+
+.for-business-page-hereToDrive-bg {
+	width: 100%;
+	height: 561px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+	top: -100px;
+	overflow: hidden;
+}
+
+#ytplayer-fbp {
+	position: absolute;
+	bottom: -200px;
+	z-index: 1;
+}
+
+.for-business-page-hereToDrive-bg-player-cover {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 100;
+}
+
+/*MOBILE*/
+.mobile .for-business-page-hereToDrive {
+	height: 762px;
+}
+
+.mobile .for-business-page-hereToDrive-top {
+	padding-top: 133px;
+}
+
+.mobile .for-business-page-hereToDrive-top-header {
+	padding-bottom: 30px;
+	font-size: 42px;
+	line-height: 46px;
+	width: 350px;
+	min-height: 138px;
+}
+
+.mobile .for-business-page-hereToDrive-bg {
+	height: 500px;
+}
+
+.mobile .for-business-page-hereToDrive-top-buttons {
+	display: flex;
+	flex-direction: column;
+}
+
+.mobile .for-business-page-hereToDrive-top-buttons div {
+	text-align: center;
+}
+.mobile .for-business-page-hereToDrive-top-buttons div:last-of-type {
+	margin-top: 20px;
+}

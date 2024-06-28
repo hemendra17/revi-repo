@@ -1,0 +1,10 @@
+/*DESKTOP MODE ONLY!!!*/
+.app-page {
+	position: relative;
+	min-height: 400px;
+	box-sizing: border-box;
+	width: 100%;
+	transition: all .2s ease-in;
+	background-image: linear-gradient(to bottom, #000648, #000b62);
+	color: #fefefe;
+}

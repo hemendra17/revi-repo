@@ -1,0 +1,59 @@
+/**
+ * Tabs style
+ */
+
+.tabs {
+	/*color: #ff4f21;*/
+}
+
+.tabs-inline {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;	
+}
+
+.tabs-inline-item {
+	font-size: 18px;
+	padding: 10px 30px;
+	border-radius: 10px;
+	color: #ff4f21;
+	border: 1px solid #ff4f21;
+	background-color: transparent;
+	margin: 0 24px;
+	cursor: pointer;
+	font-family: PoppinsRegular;
+}
+
+.tabs-inline-item.active {
+	color: #fefefe;
+	background-color: #ff4f21;
+	position: relative;
+	cursor: default;
+}
+
+.tabs-inline-item.active::before {
+	content: '⬤';
+	left: 15px;
+	top: 18px;
+	font-size: 8px;
+	position: absolute;
+	color: #fefefe;
+}
+
+/*For mobile*/
+.tabs-select {
+	width: 258px;
+	border: none;
+	padding: 12px;
+	border-radius: 12px;
+	font-family: 'PoppinsRegular';
+	font-size: 18px;
+	color: #fefefe;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;		
+	background: #ff4f21 url(./down-chevron.svg) no-repeat right 15px center;
+	background-size: 15px;
+}

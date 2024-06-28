@@ -1,0 +1,159 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	min-height: 100vh;
+	min-width: 100vw;
+}
+
+body {
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.appwrap {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+@font-face {
+	font-family: ObjectSansBold;
+	/*src: url(./fonts/ObjectSans/ObjectSans-Heavy.woff2) format('woff2');*/
+	src: url(./fonts/ObjectSans/ObjectSans-Bold.woff) format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: ObjectSansRegular;
+	src: url(./fonts/ObjectSans/ObjectSans-Regular.woff2) format('woff2');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: PoppinsBold;
+	src: url(./fonts/Poppins/Poppinsbold.woff2) format('woff2');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: PoppinsSemibold;
+	src: url(./fonts/Poppins/Poppinspoppins-boldsemibold.woff2) format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: PoppinsMedium;
+	src: url(./fonts/Poppins/Poppins-Medium.ttf) format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: PoppinsRegular;
+	src: url(./fonts/Poppins/Poppinsregular.woff2) format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+/*COMMON ELEMENTS*/
+.revi-button,
+.revi-button-white {
+	display: inline-block;
+	text-decoration: none;
+	color: #fefefe;
+	background: #ff4f21;
+	font-size: 14px;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: none;
+	font-family: PoppinsRegular;
+	text-shadow: 4px 2px 21px rgba(0, 0, 0, 0.25);	
+}
+
+.revi-button-white {
+	background-color: #f5f5f5;
+	color: #ff4f21;
+}
+
+.revi-button-bold {
+	font-family: PoppinsBold;
+}
+
+
+.revi-button:disabled {
+	opacity: 0.5;
+	background-image: repeating-linear-gradient(-45deg, red 2px, transparent 3px, transparent 6px)
+}
+.revi-button-white:disabled {
+	opacity: 0.5;
+	background-image: repeating-linear-gradient(-45deg, white 2px, transparent 3px, transparent 6px)
+}
+
+/*HEADER STYLES*/
+
+/*Main header*/
+.header,
+.header-white,
+.header-int,
+.header-int-white  {
+	font-size: 72px;
+	line-height: 75px;
+	font-family: ObjectSansBold;
+	text-align: center;
+	color: #ff4f21;
+	box-sizing: border-box;
+}
+.header-white {
+	color: #fefefe;
+}
+
+/*Intermedate header*/
+.header-int,
+.header-int-white {
+	font-size: 50px;
+	line-height: 58px;
+}
+.header-int-white {
+	color: #fefefe;
+}
+
+.mobile .header,
+.mobile .header-white,
+.mobile .header-int,
+.mobile .header-int-white {
+	font-size: 42px;
+	line-height: 46px;
+	width: 350px;
+}
+
+.comment, 
+.comment-white {
+	font-size: 18px;
+	font-family: PoppinsMedium;
+	text-align: center;
+	color: #ff4f21;
+	box-sizing: border-box;
+}
+
+.comment-white {
+	color: #fefefe;
+}
+
+.mobile .comment-white,
+.mobile .comment {
+	font-size: 16px;
+}
+
+/*USING for stylish column*/
+.flexcolumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}

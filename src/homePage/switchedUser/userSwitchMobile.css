@@ -1,0 +1,262 @@
+/* 
+	MOBILE VERSION
+	==============================
+	user switcher zone
+	not for all screen resolutions
+*/
+
+.userswitcher--wrap-mobile {
+	width: 100%;
+	box-sizing: border-box;
+	padding-top: 165px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	/*Center user*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.userswitcher--wrap-mobile.alyssa-mode {
+	background-color: #eaeaea;
+}
+
+.userswitcher--wrap-mobile.tai-mode {
+	background-color: #ffd74d;
+}
+
+.userswitcher--wrap-mobile.niami-mode {
+	background-color: #1b3168;
+}
+
+/*SLIDE 01*/
+.home-mob-screen-1 {
+	font-family: ObjectSansBold;
+	color: #ff4f21;
+	text-align: center;
+	padding-top: 133px;
+}
+
+.home-mob-screen-1 .userswitcher--stage-left-retext {
+	padding-top: 0;
+	font-size: 42px;
+	line-height: 46px;
+	height: auto;
+	max-width: 350px;
+	/*padding-bottom: 48px;*/
+	/*min-height: 140px;*/
+	min-height: 190px;
+}
+
+.home-mob-screen-1-images {
+	position: relative;
+	height: 490px;
+	width: 390px;
+	box-sizing: border-box;
+}
+
+.home-mob-screen-1 .ussr-img {
+	background-position: center;
+}
+
+.home-mob-screen-1 .ussr-img1 {
+	right: auto;
+	left: 240px;
+	top: 10px;
+	width: 158px;
+	height: 252px;
+	animation: unset !important;
+}
+
+.home-mob-screen-1 .ussr-img2 {
+	left: 0;
+	top: 141px;
+	width: 166px;
+	height: 232px;
+	animation: unset !important;
+}
+
+.home-mob-screen-1 .ussr-img3 {
+	right: auto;
+	left: 84px;
+	top: 90px;
+	width: 287px;
+	height: 351px;
+	animation: unset !important;
+}
+
+.home-mob-screen-1 .ussr-img4 {
+	right: auto;
+	left: 66px;
+	top: 72px;
+	width: 287px;
+	height: 351px;
+	animation: unset !important;
+}
+
+.home-mob-screen-1 .ussr-img5 {
+	right: auto;
+	left: 48px;
+	top: 54px;
+	width: 287px;
+	height: 351px;
+	background-position: 0px -10px !important;
+}
+/*for mobile fix*/
+.mobile .tai-mode.home-mob-screen-1 .ussr-img5 {
+	background-position: -60px -10px !important;
+}
+
+.home-mob-screen-1 .ussr-img6 {
+	left: 20px;
+	bottom: auto;
+	top: 303px;
+	width: 142px;
+	height: 169px;
+	animation: unset !important;
+}
+
+
+.home-mob-screen-1 .userswitcher--stage-right-subscript {
+	bottom: 20px;
+	right: auto;
+	left: 225px;
+	font-size: 14px;
+	transition: all .1s ease-in;
+}
+
+/*Discover the best of your neighborhood*/
+.home-mob-screen-2 {
+	padding: 0;
+}
+
+
+.hms-2-title {
+	font-family: ObjectSansBold;
+	color: #ff4f21;
+	font-size: 42px;
+	line-height: 46px;
+	max-width: 350px;
+	padding-top: 91px;
+}
+
+.hms-2-logo {
+	border-radius: 50%;
+	width: 74px;
+	height: 74px;
+	margin-top: 32px;
+}
+
+.hms-2-logo-title {
+	margin-top: 18px;
+	font-family: ObjectSansBold;
+	color: #ff4f21;
+	font-size: 18px;
+}
+
+.hms-2-cafes {
+	margin-top: 30px;
+	text-align: left;
+	font-family: ObjectSansBold;
+}
+
+.hms-2-cafes .uscafee-title {
+	font-size: 14px;
+}
+
+.home-mob-screen-2 .userswitcher--cafes {
+	opacity: 1;
+	right: auto;
+	left: auto;
+	position: relative;
+	align-items: center;
+}
+.home-mob-screen-2  .userswitcher--cafes-line {
+	position: relative;
+}
+
+
+/*And connect with your local businesses for food, fun, or events*/
+.home-mob-screen-3 {
+	padding: 70px 20px 90px 20px;
+	box-sizing: border-box;
+	height: 720px;
+	transition: all .2s ease-out;
+}
+
+/*expand item on show*/
+.home-mob-screen-3.expand {
+	padding: 0;
+	transition: all .2s ease-in;
+}
+
+/*regular view*/
+.hms-3-bg {
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	height: 656px;
+	text-align: left;
+	color: #fefefe;
+	font-family: ObjectSansBold;
+	transition: all .2s ease-out;
+}
+
+/*expanded view*/
+.home-mob-screen-3.expand .hms-3-bg{
+	transition: all .2s ease-in;
+	border-radius: 0;
+	background-size: cover;
+	height: 100%;
+}
+
+
+.hms-3-bg-header {
+	position: relative;
+	left: 20px;
+	top: 30px;
+}
+
+.hms-3-bg-header-logo {
+	position: relative;
+	top: -5px;
+}
+
+.hms-3-bg-header-title {
+	position: relative;
+	top: -15px;
+	left: 15px;
+	font-size: 18px;
+}
+
+.hms-3-bg-welcome-text {
+	margin-top: 57px;
+	padding: 0;
+	margin-left: 20px;
+	margin-bottom: 40px;
+	min-height: 230px;
+	font-size: 42px;
+	line-height: 46px;
+}
+
+.hms-3-bg .uss4-right-data {
+	font-family: PoppinsRegular;
+	font-size: 16px;
+	min-height: 220px;
+	padding: 0 20px;
+	margin-left: 0;
+}
+
+.hms-3-bg > img {
+	display: none;
+}
+
+.hms-3-bg .uss4-right-data div {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}

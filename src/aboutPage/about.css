@@ -1,0 +1,168 @@
+.about {
+	background-color: #eaeaea;
+	color: #ff4f21;
+	width: 100%;
+	box-sizing: border-box;
+	min-height: 100vh;
+}
+
+.about-welcome-header {
+	width: 903px;
+	padding-bottom: 64px;
+	padding-top: 160px;
+	text-align: center;
+}
+
+.about-welcome-images {
+	padding-bottom: 182px;
+	text-align: justify;
+	width: 1314px;
+	height: 780px;
+	box-sizing: border-box;	
+}
+
+.about-welcome-images-item {
+	border-radius: 10px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	display: inline;
+	height: 275px;
+}
+
+.about-welcome-images-item:nth-child(4),
+.about-welcome-images-item:nth-child(8) {
+	margin-right: 0;
+}
+
+.about-people {
+	padding-top: 100px;
+}
+.about-people-header {
+	padding-bottom: 30px;
+}
+.about-people-comment {
+	padding-bottom: 60px;
+}
+
+.about-people-cards {
+	padding-top: 44px;
+	width: 1120px;
+	text-align: left;
+}
+
+.about-people-cards-item {
+	display: inline-block;
+	height: 715px;
+	/*width: 357px;*/
+	width: 255px;
+	padding: 0;
+	overflow: hidden;
+	margin-right: 22px;
+}
+
+.about-people-cards-item:nth-child(4n) {
+	margin-right: 0;
+}
+
+.about-people-cards-item-image {
+	border-radius: 10px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.about-people-cards-item-name {
+	font-size: 26px;
+	font-family: ObjectSansBold;
+	margin-bottom: 6px;
+}
+.about-people-cards-item-pos {
+	font-size: 20px;
+	font-family: PoppinsRegular;
+	margin-bottom: 13px;
+}
+.about-people-cards-item-text {
+	/*max-height: 175px;*/
+	overflow: hidden;
+	/*text-align: justify;*/
+	font-family: PoppinsRegular;
+	font-size: 16px;
+	line-height: 25px;
+	margin-bottom: 20px
+}
+.about-people-cards-item-link {
+	color: #ff4f21;
+	font-size: 16px;
+	font-family: PoppinsRegular;
+}
+
+.about-careers {
+	width: 100%;
+	min-height: 424px;
+	background: linear-gradient(to bottom, #000648, #000b62);
+	box-sizing: border-box;
+	padding-top: 130px;
+}
+
+.about-careers-header {
+	margin-bottom: 30px;
+}
+
+.about-careers-email {
+	font-size: 60px;
+	color: #2020df;
+	font-family: ObjectSansBold;
+}
+
+/*MOBILE*/
+.mobile .about-welcome {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.mobile .about-welcome-header {
+	padding-top: 133px;
+	padding-bottom: 50px;
+}
+
+.mobile .about-welcome-images {
+	padding-bottom: 73px;
+	width: 1000px;
+	height: 504px;
+}
+
+.mobile .about-welcome-images-item {	
+	margin-right: 15px;
+	margin-bottom: 15px;
+	height: 206px;
+}
+
+.mobile .about-people-comment {
+	padding-bottom: 30px;
+}
+
+.mobile .about-people-cards {
+	padding-top: 50px;
+	width: 350px;
+}
+
+.mobile .about-people-cards-item {
+	width: 350px;
+	margin-right: 0;
+}
+
+.mobile .about-people-cards-item-image {
+	border-radius: 10px;
+	margin-bottom: 20px;
+	width: 350px;
+	height: 350px;
+}
+
+.mobile .about-careers {
+	padding-top: 60px;
+	min-height: 288px;
+}
+
+.mobile .about-careers-email {
+	font-size: 30px;
+}

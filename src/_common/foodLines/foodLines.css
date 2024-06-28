@@ -1,0 +1,46 @@
+/*food item container*/
+.qws-food-item {
+	display: inline-block;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	width: 236px;
+	height: 302px;
+	text-align: left;
+	margin: 0 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	/*background-size: 236px 302px;*/
+	background-size: cover;
+}
+
+.qws-food-item img {
+	width: 37px;
+}
+
+/*caption of food item*/
+.qws-food-item span {
+	position: relative;
+	top: -14px;
+	left: 10px;
+	text-shadow: 0 1px 3px #999;
+	font-family: ObjectSansBold;
+}
+
+.qws-food-item-selected {
+	transition: .4s all ease-in;
+	top: 0;
+}
+
+.qws-food-item-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.qws-food-item-line {
+	white-space: nowrap;
+	text-align: center;
+}

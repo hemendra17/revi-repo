@@ -1,0 +1,22 @@
+.stories-page {
+	position: relative;
+	transition: all .1s ease-in;
+	width: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+	background: linear-gradient(#000648, #000b62);
+	color: #fefefe;
+}
+
+.stories-page .motivation-carousele {
+	padding-top: 165px;
+	background-color: transparent;
+}
+
+.stories-page .revieved {
+	background-image: none;
+}
+
+.mobile .stories-page .motivation-carousele {
+	padding-top: 133px;
+}

@@ -1,0 +1,146 @@
+.navbar-mobile {
+	position: relative;
+}
+
+.navbar-mobile-open {
+	opacity: 1;
+	cursor: pointer;
+	transition: all .2s;
+	font-size: 20px;
+	width: 30px;
+	height: 30px;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar-mobile-open span {
+	height: 7px;
+}
+
+.navbar.mobile {
+	padding: 0 20px;
+	background: linear-gradient(rgba(0,0,0,.2), transparent);
+	line-height: 50px;
+}
+
+.navbar.mobile .navbar--logo {
+	border: none;
+	position: relative;
+	top: 5px;
+	left: -15px;
+	width: 100px;
+}
+
+.navbar.mobile.on-the-top .navbar--logo {
+	top: 5px;
+	width: 100px;
+}
+
+.navbar.mobile .navbar--getrevi {
+	top: 4px;
+	background-position: 20px 6px;
+	line-height: 11px;
+	max-height: 34px;
+	background-size: unset;
+}
+
+
+.navbar-mobile-open.hide,
+.navbar-mobile-menu.hide {
+	transition: all .3s;
+	opacity: 0;
+}
+
+.navbar-mobile-menu.hide {
+	left: 150vw;
+}
+
+.navbar-mobile-menu {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	padding: 135px 20px 40px 20px;
+	left: 0px;
+	top: 0;
+	opacity: 1;
+	background-color: #ff4f21;
+	transition: all .2s;
+	color: #fefefe;
+}
+.navbar-mobile-menu-logo {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	height: 40px;
+}
+
+.navbar-mobile-menu-close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	font-size: 20px;
+}
+
+/*MENU*/
+.navbar-mobile-menu-items {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.navbar-mobile-menu-item-1 {
+	margin-bottom: 40px;
+}
+
+.navbar-mobile-menu-item-1 a {
+	font-size: 42px;
+	line-height: 43px;
+	color: #fefefe;
+	text-decoration: none;
+}
+
+.navbar-mobile-menu-item-2 {
+	padding: 23px 0;
+}
+
+.navbar-mobile-menu-item-2 a {
+	font-size: 30px;
+	line-height: 43px;
+	color: #fefefe;
+	text-decoration: none;
+}
+
+/*Bottom buttons*/
+.navbar-mobile-menu-items-bottom {
+	width: 100%;
+}
+
+.navbar-mobile-menu-items-bottom a {
+	text-decoration: none;
+}
+
+.navbar-mobile-menu-items-bottom-login,
+.navbar-mobile-menu-items-bottom-getrevi {
+	text-align: center;
+	border: 1px solid #fefefe;
+	border-radius: 5px;
+	font-size: 30px;
+	line-height: 43px;
+	width: 100%;
+	margin-top: 20px;
+	padding: 4px;
+	box-sizing: border-box;
+}
+
+.navbar-mobile-menu-items-bottom-login {
+	color: #fefefe;
+	background-color: transparent;
+}
+.navbar-mobile-menu-items-bottom-getrevi {
+	color: #ff4f21;
+	background-color: #fefefe;
+}

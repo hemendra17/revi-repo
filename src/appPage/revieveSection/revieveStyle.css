@@ -1,0 +1,42 @@
+.app-page-revieve-wrap {
+	position: relative;
+	width: 100vw;
+	/*padding bottom + max height of inner blocks (will needed)*/
+	height: 600px;
+}
+
+.app-page-revieve {
+	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	position: relative;
+	top: 0;
+}
+
+.app-page-revieve-header {
+	display: inline-block;
+	padding: 174px 0 41px 0;
+	max-width: 902px;
+	font-size: 72px;
+	line-height: 75px;
+	text-align: center;
+	font-family: ObjectSansBold;
+}
+
+.button-bold {
+	font-family: PoppinsBold;
+}
+
+/*Mobile version*/
+.mobile .app-page-revieve {
+	height: 425px;
+}
+
+.mobile .app-page-revieve-header {
+	padding: 133px 0 28px 0;
+	min-height: 138px;
+	font-size: 42px;
+	line-height: 46px;
+}

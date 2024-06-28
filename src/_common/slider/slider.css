@@ -1,0 +1,55 @@
+.slider {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+}
+
+.slider-switcher {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;	
+}
+
+.slider-point {
+	width: 10px;
+	height: 10px;
+	margin: 10px;
+	border-radius: 50%;
+	background-color: #fefefe;
+}
+.slider-point.active {
+	background-color: #ff4f21;
+}
+
+.slider-cards {
+	width: 100%;
+	margin-bottom: 50px;
+	box-sizing: border-box;	
+}
+
+/* Line should have a little shift on activation in desktop mode */
+.slider-cards-line {
+	display: flex;
+	justify-content: center;
+	transition: all .3s;
+	width: 100%;
+	position: relative;
+	left: 0;
+}
+
+.slider-cards-line.active {
+	transition: all .3s .6s;
+	left: -300px;
+}
+
+/*MOBILE*/
+
+.mobile .slider-cards-line {
+	justify-content: flex-start;
+	width: auto;
+}

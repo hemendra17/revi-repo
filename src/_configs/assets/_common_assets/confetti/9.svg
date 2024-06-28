@@ -1,0 +1,17 @@
+<svg height="35" viewBox="0 0 35 45" width="45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<style>.cls-1{fill:url(#linear-gradient);}</style>
+		<linearGradient gradientTransform="translate(10767.78 994.7) rotate(125.43)" gradientUnits="userSpaceOnUse" id="linear-gradient" x1="5428.93" x2="5439.15" y1="9344.73" y2="9344.73">
+			<stop offset="0.19" stop-color="#ffd74d"/>
+			<stop offset="0.47" stop-color="#fee237"/>
+			<stop offset="0.77" stop-color="#fceb27"/>
+			<stop offset="1" stop-color="#fcee21"/>
+		</linearGradient>
+	</defs>
+	<title>Asset 40</title>
+	<g data-name="Layer 2" id="Layer_2">
+		<g id="graphics">
+			<path transform="scale(5)" class="cls-1" d="M1.42,3.16a10.28,10.28,0,0,1,.74-.92A12.83,12.83,0,0,1,4.86,0Q6,2,6.9,4.17h0A6.81,6.81,0,0,0,5.43,5.42a2.51,2.51,0,0,0-.67,2.42A44.82,44.82,0,0,1,.13,9.18,7.89,7.89,0,0,1,1.42,3.16Z"/>
+		</g>
+	</g>
+</svg>

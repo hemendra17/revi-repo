@@ -1,0 +1,122 @@
+.get-started {
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	background-color: #000648;
+	background: linear-gradient(#000648, #000b62);
+	color: #fefefe;
+	height: 706px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.get-started-logo,
+.get-started-logo-nobage {
+	display: inline-block;
+	width: 95px;
+	height: 95px;
+	border-radius: 20px;
+	background-color: #fff;
+	position: relative;
+	margin: 117px 0 57px 0;
+	background-repeat: no-repeat;
+	background-position: 5px -2px;
+}
+
+.get-started-logo::before {
+	content: '1';
+	font-size: 24px;
+	color: #fff;
+	background: #ff4f21;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	right: -18px;
+	top: -18px;
+	border-radius: 50%;
+	text-align: center;
+	display: block;
+	line-height: 35px;
+	font-family: PoppinsRegular;
+}
+
+.get-started-getstart {
+	text-align: center;
+	padding-bottom: 75px;
+	box-sizing: border-box;
+}
+
+.get-started-getstart div {
+	display: inline-block;
+	color: #fefefe;
+	font-size: 72px;
+	line-height: 85px;
+	width: 750px;
+	font-family: ObjectSansBold;
+}
+
+/*on devices buttons*/
+.get-started-ondevices {
+	display: flex;
+	justify-content: center;
+}
+
+
+.get-started-ondevices-item {
+	border: 1px solid #fefefe;
+	padding: 12px 44px;
+	border-radius: 20px;
+	text-align: left;
+	min-width: 110px;
+	margin: 33px;
+}
+
+.get-started-ondevices-item a {
+	text-decoration: none;
+}
+
+.get-started-ondevices-soon {
+	font-size: 17px;
+	font-family: PoppinsRegular;
+}
+.get-started-ondevices-store-link,
+.get-started-ondevices-store {
+	font-size: 20px;
+	font-family: PoppinsSemibold;
+}
+
+.get-started-ondevices-store-link {
+	position: relative;
+	top: 12px;
+	color: #fefefe;
+}
+
+/*MOBILE VIEW*/
+
+.get-started.mobile {
+	height: 583px;
+}
+
+.get-started.mobile .get-started-getstart {
+	padding-bottom: 30px;
+}
+
+.get-started.mobile .get-started-getstart div {
+	font-size: 42px;
+	line-height: 46px;
+	width: auto;
+	min-height: 92px;
+}
+
+.get-started.mobile .get-started-ondevices {
+	flex-direction: column;
+	align-items: center;
+}
+
+.get-started.mobile .get-started-ondevices-item {
+	width: 210px;
+	margin: 0;
+	box-sizing: border-box;
+	min-height: 76px;
+	margin-bottom: 20px;
+}

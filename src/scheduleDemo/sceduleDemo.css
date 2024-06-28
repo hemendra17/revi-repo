@@ -1,0 +1,373 @@
+.schedule-demo {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999999;
+	box-sizing: border-box;
+	padding: 30px;
+	background-color: #EAEAEA;
+	min-height: 100vh;
+}
+
+.schedule-demo-logo {
+	height: 90px;
+	position: absolute;
+	left: 30px;
+	top: 20px;
+}
+
+.schedule-demo-close {
+	font-size: 40px;
+	position: absolute;
+	right: 40px;
+	top: 20px;
+	cursor: pointer;
+	color: #000;
+}
+
+.schedule-demo-close a {
+	color: #000;
+	text-decoration: none;
+}
+
+.schedule-demo-data {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.schedule-demo-info {
+	box-sizing: border-box;
+	padding: 0 80px;
+}
+
+.schedule-demo-info-header {
+	color: #FF4F21;
+	font-family: ObjectSansBold;
+	font-size: 90px;
+	line-height: 95px;
+	max-width: 812px;
+	min-height: 183px;
+}
+
+.schedule-demo-info-promo {
+	margin-top: 90px;
+}
+
+.schedule-demo-info-promo-line {
+	margin-bottom: 30px;
+	font-family: PoppinsSemibold;
+}
+.schedule-demo-info-promo-line-title {
+	display: inline-block;
+	width: 380px;
+	font-size: 24px;
+	color: #FF4F21;
+}
+.schedule-demo-info-promo-line-price {
+	display: inline-block;
+	width: 160px;
+	color: #AEAFB5;
+	text-decoration: line-through;
+	font-size: 24px;
+	text-align: right;
+}
+.schedule-demo-info-promo-line-bonus {
+	display: inline-block;
+	min-width: 60px;
+	font-size: 24px;
+	color: #FF4F21;
+	margin-left: 20px;
+}
+
+/*//////////*/
+
+.schedule-demo-form-short,
+.schedule-demo-form {
+	box-sizing: border-box;
+	padding-top: 100px;
+	position: relative;
+}
+
+.schedule-demo-form-wrap {
+	width: 622px;
+	min-height: 714px;
+	box-sizing: border-box;
+	border-radius: 45px;
+	padding: 30px 66px; 
+	background-color: #FFFFFF;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+.schedule-demo-form::before {
+	content: '';
+	background-color: #EAEAEA;
+	width: 630px;
+	height: 694px;
+	border-radius: 45px;
+	position: absolute;
+	z-index: 1;
+	left: 15px;
+	top: 140px;
+}
+
+.schedule-demo-form::after {
+	content: '';
+	background-color: #2020DF;
+	width: 541px;
+	height: 671px;
+	border-radius: 45px;
+	position: absolute;
+	z-index: 0;
+	left: 125px;
+	top: 180px;
+}
+
+.schedule-demo-form-short {
+	background-color: #FFFFFF;
+	border-radius: 26px;
+	padding-top: 0;
+}
+
+.schedule-demo-form-short .schedule-demo-form-wrap {
+	min-height: auto;
+}
+
+
+.schedule-demo-form-title {
+	width: 443px;
+	font-family: PoppinsSemibold;
+	font-size: 24px;
+	color: #000648;
+	min-height: 99px;
+	margin: 0;
+	padding-top: 20px;
+}
+
+.schedule-demo-form-fields {
+	width: 100%;
+}
+
+.schedule-demo-form-fields input,
+.schedule-demo-form-fields select {
+	border: 1px solid #0A1E4288;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 16px;
+	min-height: 56px;
+	line-height: 18px;
+	box-sizing: border-box;
+	color: #000000ee;
+	margin-bottom: 24px;
+}
+
+.value-incorrect {
+	color: #FF7F7FFF !important;
+	border: 1px solid #FF7F7FFF !important;
+}
+
+.schedule-demo-form-fields select {
+	background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 17'%3E%3Cpath fill='%23DDDEDE' d='M2 2L0 4h4zm0 13L0 13h4z'/%3E%3C/svg%3E") no-repeat right 15px center;
+	background-size: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    appearance: none;
+}
+
+.schedule-demo-form-fields #firstName {
+	width: 231px;
+	margin-right: 23px
+}
+.schedule-demo-form-fields #lastName {
+	width: 231px;
+}
+.schedule-demo-form-fields #businessName,
+.schedule-demo-form-fields #location,
+.schedule-demo-form-fields #phoneNumber,
+.schedule-demo-form-fields #Email,
+.schedule-demo-form-fields #reasonInterested,
+.schedule-demo-form-fields #trafficSource {
+	width: 485px;
+}
+
+.schedule-demo-form-submit {
+	text-align: center;
+	margin-top: 5px;
+}
+
+.schedule-demo-form-submit-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #2020DF;
+	font-family: PoppinsMedium;
+	font-size: 24px;
+	line-height: 40px; 
+}
+
+.error-color {
+	color: #df3720;
+}
+
+@media screen and (max-width: 1706px) {
+
+	.schedule-demo-close {
+		font-size: 30px;
+	}
+
+	.schedule-demo-info-header {
+		font-size: 80px;
+		max-width: 635px;
+		padding-top: 100px;
+	}
+
+	.schedule-demo-info-promo-line-title {
+		width: 310px;
+	}
+
+	.schedule-demo-info-promo-line-title,
+	.schedule-demo-info-promo-line-price,
+	.schedule-demo-info-promo-line-bocus {
+		font-size: 20px;
+	}
+
+	.schedule-demo-form-wrap {
+		padding: 20px 42px;
+		width: 572px;
+		min-height: auto;
+	}
+
+	.schedule-demo-form-title {
+		font-size: 20px;
+		min-height: 79px;
+	}
+
+	.schedule-demo-form-fields input,
+	.schedule-demo-form-fields select {
+		font-size: 12px;
+		padding: 12px;
+		min-height: 36px;
+		margin-bottom: 20px;
+	}
+
+	.schedule-demo-form::before {
+		left: -45px;
+		top: -20px;
+	}
+
+	.schedule-demo-form::after {
+		left: 55px;
+		height: 500px;
+		top: 185px;
+	}	
+}
+
+/*MOBILE VERSION*/
+.schedule-demo.mobile {
+	height: auto;
+	position: static;
+	padding: 20px;
+}
+
+.mobile .schedule-demo-data {
+	flex-direction: column;
+}
+
+.mobile .schedule-demo-info {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;	
+}
+
+.mobile .schedule-demo-info-header {
+	font-size: 40px;
+	text-align: left;
+	line-height: 45px;
+	min-width: 320px;
+	min-height: 130px;
+}
+
+.mobile .schedule-demo-info-promo {
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+	max-width: 390px;
+}
+
+.mobile .schedule-demo-info-promo-line {
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	justify-content: space-between;
+}
+
+.mobile .schedule-demo-info-promo-line-title,
+.mobile .schedule-demo-info-promo-line-price,
+.mobile .schedule-demo-info-promo-line-bonus {
+	font-size: 14px;
+	width: auto;
+	margin: 0;
+}
+
+.mobile .schedule-demo-info-promo-line-title {
+	min-width: 130px;
+}
+
+.mobile .schedule-demo-info-promo-line-price {
+	min-width: 90px;
+}
+
+.mobile .schedule-demo-info-promo-line-bonus {
+	min-width: 70px;
+}
+
+.mobile .schedule-demo-form {
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile .schedule-demo-form::before,
+.mobile .schedule-demo-form::after {
+	display: none;
+}
+
+.mobile .schedule-demo-form-submit-body {
+	font-size: 16px;
+}
+
+.mobile .schedule-demo-form-wrap {
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 10px;
+	padding: 20px;
+	max-width: 450px;
+}
+
+.mobile .schedule-demo-form-title {
+	width: 100%;
+	padding: 0 0 20px 0;
+	font-size: 18px;
+	min-height: auto;
+}
+
+.mobile .schedule-demo-form-fields input,
+.mobile .schedule-demo-form-fields select {
+	border-radius: 2px;
+	font-size: 13px;
+	padding: 10px;
+	margin-bottom: 16px;
+	width: 100% !important;
+}

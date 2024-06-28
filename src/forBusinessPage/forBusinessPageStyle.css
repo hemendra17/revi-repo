@@ -1,0 +1,21 @@
+.for-business-page {
+	position: relative;
+	min-height: 200px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0;
+	transition: all .1s;
+	background-color: #eaeaea;
+}
+
+.fbp-pad-menu {
+	padding-top: 140px;
+	background-color: #000b62;
+}
+.fbp-pad-menu-darkblue {
+	background-color: #000648;
+}
+
+.mobile .fbp-pad-menu {
+	padding-top: 0;
+}

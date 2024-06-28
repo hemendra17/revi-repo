@@ -1,0 +1,110 @@
+.app-page-seeAll {
+	min-height: 500px;
+	padding: 80px 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;	
+}
+
+.app-page-see-all-img {
+	width: 65px;
+	height: 65px;
+	background-color: #ff4f21;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 115px;
+}
+
+.app-page-see-all-img img {
+	width: 60px;
+	height: 60px;
+}
+
+.app-page-see-all-header {
+	margin-top: 50px;
+	max-width: 1000px;
+	min-height: 116px;
+	font-size: 50px;
+	line-height: 58px;
+	color: #fefefe;
+	font-family: ObjectSansBold;
+	text-align: center;
+}
+
+.app-page-see-all-comment {
+	text-align: center;
+	margin: 34px 0 91px 0;
+	font-family: PoppinsSemibold;
+	color: #fefefe;
+	font-size: 18px;
+	min-height: 75px;
+	max-width: 642px;
+}
+
+.app-page-see-all-images {
+	transition: .3s all ease-out;
+}
+
+.app-page-see-all-images .qws-food-item-container {
+	flex-direction: row;
+}
+
+.app-page-see-all-images.offset {
+	margin-left: 200px;
+	transition: .3s all .6s ease-out;
+}
+
+.app-page-see-all-images .qws-food-item {
+	margin: 0 11px;
+	opacity: 0.4;
+}
+.app-page-see-all-images .qws-food-item-selected {
+	opacity: 1;
+}
+
+
+/*MOBILE VERSION*/
+.mobile .app-page-seeAll {
+	padding-top: 65px;
+}
+
+.mobile .app-page-see-all-img {
+	width: 55px;
+	height: 55px;
+	line-height: 90px;
+}
+
+.mobile .app-page-see-all-img img {
+	width: 45px;
+	height: 45px;
+}
+
+.mobile .app-page-see-all-header {
+	margin-top: 40px;
+	width: 350px;
+	min-height: 184px;
+	font-size: 42px;
+	line-height: 46px;
+	margin-bottom: 30px;
+}
+
+.mobile .app-page-see-all-comment {
+	width: 350px;
+	font-size: 16px;
+	margin: 0 0 30px 0;
+}
+
+.mobile .app-page-see-all-images .qws-food-item-container {
+	flex-direction: column;
+}
+
+.mobile .app-page-see-all-images.offset {
+	margin-left: 0;
+	transition: .3s all .6s ease-out;
+}
+
+.mobile .app-page-see-all-images .qws-food-item-line {
+	margin-bottom: 20px;
+}

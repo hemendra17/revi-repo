@@ -1,0 +1,137 @@
+.for-business-page-tools {
+	background-color: #000b62;
+	color: #fefefe;
+	padding: 0px 0 150px 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 140px;
+}
+
+.fbpt-header {
+	width: 824px;
+	padding-bottom: 16px;
+	font-size: 66px !important;
+}
+
+.fbpt-comment {
+	width: 624px;
+	/*padding-bottom: 150px;*/
+	padding-bottom: 100px;
+	font-size: 20px;
+}
+
+.fbpt-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.fbpt-info {
+	width: 807px;
+	padding: 44px 0 0 44px;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+.fbpt-info-title {
+	text-align: left !important;
+	margin-bottom: 42px;
+}
+
+.fbpt-info-comment {
+	text-align: left !important;
+	margin-bottom: 40px;
+	width: 455px;
+}
+
+.fbpt-info-ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.fbpt-info-li {
+	font-family: PoppinsSemibold;
+	font-size: 20px;
+	padding-left: 51px;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	background-position: 0 0;
+	line-height: 32px;
+}
+
+.fbpt-card {
+}
+
+.fbpt-card-img {
+	border-radius: 10px;
+	height: 540px;
+	position: relative;
+	left: 100px;
+	transition: .3s .6s all;
+}
+.active .fbpt-card-img {
+	left: 0;
+	transition: .3s .6s all;
+}
+
+/*MOBILE*/
+.mobile .for-business-page-tools {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding-bottom: 100px;
+	padding-top: 80px;
+}
+
+.mobile .fbpt-header {
+	padding-bottom: 30px;
+	font-size: 42px !important;
+}
+
+.mobile .fbpt-comment {
+	width: 350px;
+	padding-bottom: 140px;
+}
+
+.mobile .fbpt-wrap {
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.mobile .fbpt-info {
+	width: 350px;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.mobile .fbpt-info-title,
+.mobile .fbpt-info-comment {
+	width: 100%;
+	text-align: center !important;
+}
+
+.mobile .fbpt-card {
+	width: 350px;
+    padding: 0;	
+}
+
+.mobile .fbpt-card-img {
+	height: 370px;
+	margin-bottom: 30px;
+	left: 0;
+}
+
+.mobile .fbpt-info-ul {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.mobile .fbpt-info-li {
+	font-size: 16px;
+}

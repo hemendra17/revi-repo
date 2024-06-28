@@ -1,0 +1,9 @@
+<svg id="send" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <circle id="Oval_Copy_8" data-name="Oval Copy 8" cx="32.5" cy="32.5" r="32.5" fill="#ff4f21"/>
+  <g id="icon_sent_white" data-name="icon/sent/white" transform="translate(7.833 12.5)">
+    <g id="icon_sent_white-2" data-name="icon/sent/white" transform="translate(0.783 0)">
+      <path id="Fill_1" data-name="Fill 1" d="M43.47,0,0,13.032,4.435,26.34l3.518-1.173L4.728,15.486,37.933,5.531,27.957,38.715l-9.682-3.227L17.1,39.008l13.306,4.434Z" fill="#fefefe"/>
+      <path id="Fill_2" data-name="Fill 2" d="M2.622,17.948,0,15.325,15.325,0l2.622,2.622Z" transform="translate(8.715 16.78)" fill="#fefefe"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,148 @@
+.for-business-page-simpleSeamless {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #eaeaea;
+	/*padding-top: 240px;*/
+	padding-top: 140px;
+}
+
+.fbpss-header {
+	width: 580px;
+	min-height: 58px;
+	padding-bottom: 26px;
+}
+
+.fbpss-comment {
+	width: 624px;
+	min-height: 75px;
+	padding-bottom: 28px;
+}
+
+.fbpss-slider {
+	box-sizing: border-box;
+	width: 100%;
+	padding-bottom: 15px;
+}
+
+/*cards expand*/
+.fbpss-slider .slider-cards-line > div:first-child,
+.fbpss-slider .slider-cards-line > div:last-child {
+	transition: .2s .6s all;
+}
+
+.fbpss-slider-toleft .slider-cards-line {
+	justify-content: flex-start;
+}
+
+.fbpss-slider-collapsed .slider-cards-line > div:first-child{
+	margin-right: -530px !important;
+	transition: .2s .3s all !important;
+}
+.fbpss-slider-collapsed .slider-cards-line > div:last-child{
+	margin-left: -530px !important;
+	transition: .2s .3s all !important;
+}
+
+.fbpss-slider-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 425px;
+	margin: 0 25px;
+	transition: .3s all;
+	cursor: pointer;
+}
+
+/*vertical offset for active card*/
+.fbpss-slider-card.main {
+	margin-top: 35px;
+	cursor: default;
+}
+
+.fbpss-slider-card-img {
+	width: 380px;
+	height: 290px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #999;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 436px 291px;
+	background-color: #eaeaea;
+}
+
+.fbpss-slider-card-text {
+	color: #ff4f21;
+	font-family: ObjectSansBold;
+	padding-top: 15px;
+}
+
+.fbpss-slider-card.main .fbpss-slider-card-img {
+	width: 545px;
+	height: 362px;
+	background-size: contain;
+}
+
+.fbpss-slider-card.main .fbpss-slider-card-text {
+	padding-top: 15px;
+	font-size: 26px;
+}
+
+.fbpss-comment-2 {
+	width: 382px;
+	font-size: 13px !important;
+	padding-bottom: 20px;
+}
+
+.fbpss-buttons {
+	text-align: center;
+	width: 100%;
+	/*padding-bottom: 140px;*/
+}
+
+/*MOBILE*/
+.mobile .for-business-page-simpleSeamless {
+	padding-top: 0;
+}
+
+.mobile .fbpss-slider-card {
+	height: 350px;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+.mobile .fbpss-header {
+	width: 350px;
+	padding-bottom: 30px;
+}
+
+.mobile .fbpss-comment {
+	width: 350px;
+	padding-bottom: 30px;
+}
+
+.mobile .fbpss-comment-2 {
+	max-width: 350px;
+}
+
+.mobile .fbpss-slider-card-img {
+	height: 243px;
+	width: 315px;
+	background-size: contain;
+}
+
+.mobile .fbpss-slider-card.main .fbpss-slider-card-img {
+	width: 366px;
+	height: 270px;
+	background-size: contain;
+}
+
+.mobile .fbpss-slider .slider-cards {
+	margin-bottom: 0;
+}
+
+.mobile .fbpss-buttons {
+	padding-bottom: 100px;
+}

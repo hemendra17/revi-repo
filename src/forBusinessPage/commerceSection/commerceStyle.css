@@ -1,0 +1,187 @@
+.for-business-page-commerce {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	background-color: #eaeaea;
+	color: #ff4f21;
+	min-height: 700px;
+	box-sizing: border-box;
+	/*padding-top: 240px;*/
+	padding-top: 140px;
+}
+
+.fbpc-info {
+	padding: 20px 40px;
+	box-sizing: border-box;
+	width: 820px;
+}
+
+.fbpc-info-header {
+	text-align: left !important;
+}
+
+.fbpc-info-benefits {
+	padding: 35px 0;
+	display: grid;
+	grid-template-columns: 320px 320px;
+	grid-gap: 10px 20px;	
+}
+
+.fbpc-info-benefits-card {
+	width: 317px;
+	height: 185px;
+	border-radius: 10px;
+	/*box-shadow: 0 0 10px rgba(0,0,0,.5);*/
+	padding: 25px 10px 25px 65px;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: 17px 27px;
+	margin: 0 10px 10px 0;
+	background-color: #f5f5f5;
+}
+
+.fbpc-info-benefits-card-title {
+	font-family: ObjectSansBold;
+	font-size: 26px;
+	padding-bottom: 10px;
+}
+
+.fbpc-info-benefits-card-comment {
+	font-family: PoppinsSemibold;
+	font-size: 13px;
+}
+
+/*------------*/
+.fbpc-image {
+	width: 547px;
+	height: 600px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+	box-sizing: border-box;
+	padding: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+.fbpc-image-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.fbpc-image-logo {
+	border-radius: 50%;
+	margin-right: 12px;
+	box-shadow: 0 0 2px #333;
+	width: 60px;
+	height: 60px;
+}
+
+.fbpc-image-title {
+	font-size: 20px;
+	color: #eaeaea;
+	font-family: ObjectSansBold;
+}
+.fbpc-image-cafe {
+	font-size: 16px;
+	font-family: PoppinsRegular;
+}
+
+.fbpc-image-comment {
+	padding-top: 24px;
+	font-family: PoppinsSemibold;
+	color: #fefefe;
+	width: 412px;
+	line-height: 30px;
+}
+
+/*----------*/
+.fbpc-revi-button {
+	display: none;
+	padding: 21px 0 100px 0;
+	text-align: center;
+	width: 100%;
+}
+
+
+/* MOBILE */
+.mobile .for-business-page-commerce {
+	flex-direction: column;
+	align-items: center;
+	padding-top: 0;
+}
+
+.mobile .fbpc-info {
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.mobile .fbpc-info-header {
+	text-align: center !important;
+	width: 100% !important;
+}
+
+.mobile .fbpc-info-benefits {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.mobile .fbpc-info-benefits-card {
+	width: 350px;
+	height: 200px;
+	padding: 65px 24px 24px 24px;
+	margin: 0 0 10px 0;
+	text-align: center;
+	background-position: center 17px;
+	transition: all .2s;
+	overflow: hidden;
+}
+
+.mobile .fbpc-info-benefits-card.closed {
+	height: 60px;
+	box-sizing: border-box;
+	background-image: none !important;
+	transition: all .2s;
+	padding: 15px 0;
+}
+
+.mobile .fbpc-info-benefits-card.closed .fbpc-info-benefits-card-comment {
+	display: none;
+}
+
+
+.mobile .fbpc-info-buttons {
+	display: none;
+}
+
+/*===*/
+.mobile .fbpc-image {
+	width: 350px;
+	height: 387px;
+	background-size: cover;
+	flex-direction: column-reverse;
+	justify-content: flex-start;
+}
+
+.mobile .fbpc-image-comment {
+	width: 308px;
+	padding-bottom: 75px;
+}
+
+/*=*/
+.mobile .fbpc-revi-button {
+	display: block;
+}
+/*
+.mobile
+*/

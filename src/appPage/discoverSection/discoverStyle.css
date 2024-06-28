@@ -1,0 +1,98 @@
+.app-page-discover {
+	min-height: 500px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding: 120px 0 80px 0;
+	box-sizing: border-box;
+}
+
+.app-page-discover-info {
+	box-sizing: border-box;
+	width: 603px;
+	height: 575px;
+	padding: 70px 0 0 44px;
+}
+
+.app-page-discover-location {
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	background-color: #ff4f21;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	margin-bottom: 50px;
+}
+
+.app-page-discover-location img {
+	position: relative;
+	width: 34px;
+	top: 10px;
+}
+
+.app-page-discover-header {
+	font-size: 60px;
+	line-height: 68px;
+	font-family: ObjectSansBold;
+	min-height: 136px;
+	margin-bottom: 40px;
+}
+
+.app-page-discover-comment {
+	font-family: PoppinsSemibold;
+	font-size: 18px;
+	display: inline-block;
+	max-width: 454px;
+	min-height: 75px;
+}
+
+.app-page-discover-image {
+	width: 763px;
+	height: 575px;
+}
+
+/*MOBILE VERSION*/
+
+.mobile .app-page-discover {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile .app-page-discover-info {
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	height: 320px;
+}
+
+.mobile .app-page-discover-location {
+	width: 55px;
+	height: 55px;
+	margin-bottom: 40px;
+}
+
+.mobile .app-page-discover-location img {
+	width: 28px;
+}
+
+.mobile .app-page-discover-header {
+	font-size: 42px;
+	line-height: 46px;
+	min-height: 92px;
+	margin-bottom: 30px;
+}
+
+.mobile .app-page-discover-comment {
+	font-size: 16px;
+	text-align: justify;
+	display: inline-block;
+	min-height: 70px;
+	max-width: 310px;
+}
+
+.mobile .app-page-discover-image {
+	width: auto;
+	height: 413px;
+}

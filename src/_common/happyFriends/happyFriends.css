@@ -1,0 +1,235 @@
+.happy-friends {
+	text-align: center;
+	padding-top: 125px;
+	box-sizing: border-box;
+}
+.happy-friends-wrap {
+	display: inline-block;
+	width: 980px;
+	height: 300px;
+	position: relative;
+}
+
+/* 980 x 260 px*/
+.happy-friends-image {
+	position: absolute;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+/*grouped image*/
+.happy-friends-image-grouped {
+	position: relative;
+}
+
+.happy-friends-img-1,
+.happy-friends-img-3,
+.happy-friends-img-6,
+.happy-friends-img-8,
+.happy-friends-img-10,
+.happy-friends-img-11,
+.happy-friends-img-12 {
+	width: 58px;
+	height: 58px;
+}
+
+.happy-friends-img-2,
+.happy-friends-img-4,
+.happy-friends-img-7,
+.happy-friends-img-9,
+.happy-friends-img-13 {
+	width: 154px;
+	height: 154px;
+}
+
+.happy-friends-img-1 {
+	left: 0px;
+	top: 260px;
+}
+.happy-friends-img-2 {
+	left: 58px;
+	top: 130px;
+}
+.happy-friends-img-3 {
+	left: 215px;
+	top: 250px;
+}
+.happy-friends-img-4 {
+	left: 215px;
+	top: 10px;
+}
+.happy-friends-img-5 {
+	width: 86px;
+	height: 86px;
+	left: 310px;
+	top: 200px;
+}
+.happy-friends-img-6 {
+	left: 407px;
+	top: 81px;
+}
+.happy-friends-img-7 {
+	left: 427px;
+	top: 160px;
+}
+.happy-friends-img-8 {
+	left: 550px;
+	top: 50px;
+}
+.happy-friends-img-9 {
+	left: 630px;
+	top: 0px;
+}
+.happy-friends-img-10 {
+	left: 630px;
+	top: 180px;
+}
+.happy-friends-img-11 {
+	left: 720px;
+	top: 250px;
+}
+.happy-friends-img-12 {
+	left: 760px;
+	top: 160px;
+}
+.happy-friends-img-13 {
+	left: 820px;
+	top: 160px;
+}
+
+/*extended version*/
+
+.happy-friends-img-14,
+.happy-friends-img-15,
+.happy-friends-img-16,
+.happy-friends-img-17,
+.happy-friends-img-18,
+.happy-friends-img-19 {
+	width: 58px;
+	height: 58px;
+}
+
+.happy-friends-img-14 {
+	left: 760px;
+	top: 350px;
+}
+.happy-friends-img-15 {
+	left: 560px;
+	top: 320px;
+}
+.happy-friends-img-16 {
+	left: 450px;
+	top: 380px;
+}
+.happy-friends-img-17 {
+	left: 340px;
+	top: 340px;
+}
+.happy-friends-img-18 {
+	left: 240px;
+	top: 390px;
+}
+.happy-friends-img-19 {
+	left: 120px;
+	top: 340px;
+}
+
+.happy-friends-img-20 {
+	width: 86px;
+	height: 86px;
+	left: 640px;
+	top: 400px;
+}
+
+/* Talk baloons */
+.happy-friends-talk-1,
+.happy-friends-talk-2 {
+	position: absolute;
+	border-radius: 20px;
+	padding: 12px;
+	box-sizing: border-box;
+	font-size: 20px;
+	background: #2020df;
+	color: #fefefe;
+	font-family: PoppinsBold;
+	opacity: 0;
+	transform: scale(1.2);
+	transition: all 1s ease-in;
+}
+
+.happy-friends-talk-1 div, 
+.happy-friends-talk-2 div {
+	z-index: 1;
+	position: relative;
+	white-space: nowrap;
+}
+
+.happy-friends-talk-1::before,
+.happy-friends-talk-2::before {
+	content: '';
+	border-bottom: 30px solid #2020df;
+	border-right: 30px solid #2020df;
+	border-left: 30px solid rgba(0,0,0,0);
+	border-top: 30px solid rgba(0,0,0,0);
+	transform: rotate(0deg);
+	position: absolute;
+	right: 0px;
+	top: -25px;
+	z-index: 0;
+}
+
+
+.happy-friends-talk-1 {
+	background: #000648;
+	left: 740px;
+	top: -80px;
+}
+
+.happy-friends-talk-2 {
+	background: #0e1d65;
+	left: -30px;
+	top: 70px;
+}
+
+.happy-friends-talk-1.display-baloon {
+	opacity: 1;
+	transition: .2s all 2s ease-in;
+	transform: scale(1);
+}
+.happy-friends-talk-2.display-baloon {
+	opacity: 1;
+	transition: .2s all 3s ease-in;
+	transform: scale(1);
+}
+
+.happy-friends-talk-1::before {
+	content: '';
+	border-bottom: 30px solid #000648;
+	border-right: 30px solid #000648;
+	transform: rotate(180deg);
+	left: 0px;
+	top: 20px;
+}
+.happy-friends-talk-2::before {
+	content: '';
+	border-bottom: 30px solid #0e1d65;
+	border-right: 30px solid #0e1d65;
+	transform: scale(-1) rotate(90deg);
+	right: 0px;
+	top: 25px;
+}
+
+/*MOBILE*/
+
+.mobile .happy-friends-image-grouped {
+	left: calc(-100vw/4);
+}
+
+.mobile .happy-friends-talk-1 {
+	left: 350px;
+	top: -60px;
+}
+
+.mobile .happy-friends-talk-2 {
+	display: none;
+}

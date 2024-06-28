@@ -1,0 +1,20 @@
+<svg height="55" viewBox="0 0 35 55" width="35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<style>.cls-1{fill:url(#linear-gradient);}</style>
+		<linearGradient gradientTransform="matrix(0.58, 0.81, 0.81, -0.58, 1039.67, 730.72)" gradientUnits="userSpaceOnUse" id="linear-gradient" x1="-1196.6" x2="-1185.84" y1="-424.07" y2="-424.07">
+			<stop offset="0" stop-color="#0e1d65"/>
+			<stop offset="0.18" stop-color="#0f1d69"/>
+			<stop offset="0.36" stop-color="#101d75"/>
+			<stop offset="0.54" stop-color="#131e89"/>
+			<stop offset="0.72" stop-color="#171fa4"/>
+			<stop offset="0.9" stop-color="#1d1fc8"/>
+			<stop offset="1" stop-color="#2020df"/>
+		</linearGradient>
+	</defs>
+	<title>Asset 26</title>
+	<g data-name="Layer 2" id="Layer_2">
+		<g id="graphics">
+			<path transform="scale(4)" class="cls-1" d="M3.23.28C3.14.11,3.08,0,3.07,0L1.53.93,0,1.86c1,1.71,3,5.5,2.14,7.32,1.14.69,2.29,1.33,3.45,1.91,1.06-2.61.1-5.45-.72-7.48A31.13,31.13,0,0,0,3.23.28Z"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,130 @@
+.for-business-page-connectWith {
+	height: 768px;
+	background: #000b62;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 140px;
+}
+
+.fbpcw-center {
+	width: 922px;
+	min-height: 460px;
+	padding-top: 80px;
+	/*box-sizing: border-box;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.fbpcw-baloon {
+	width: 281px;
+	color: #fefefe;
+	text-align: center;
+	font-family: PoppinsBold;
+	font-size: 20px;
+	line-height: 32px;
+	border-radius: 10px;
+	background-color: #2020df;
+	position: relative;
+	margin-bottom: 32px;
+	padding: 10px 0;
+
+	opacity: 0;
+	transition: .2s all .2s ease-in;
+	transform: scale(3);
+}
+
+.active .fbpcw-baloon {
+	opacity: 1;
+	transition: .2s all .8s ease-in;
+	transform: scale(1);	
+}
+
+.fbpcw-baloon::after {
+	content: '';
+	position: absolute;
+	bottom: -40px;
+	left: 120px;
+	border-top: 20px solid #2020df;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+
+.fbpcw-logo {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0 0 3px #999;
+	margin-bottom: 31px;
+}
+
+.fbpcw-header {
+	width: 100%;
+	margin-bottom: 24px;
+}
+.fbpcw-comment {
+	width: 624px;
+}
+
+.fbpcw-left,
+.fbpcw-right {
+	width: 220px;
+	height: 540px;
+	transition: .2s .5s all;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+
+.fbpcw-left .baloon-item,
+.fbpcw-right .baloon-item {
+	position: absolute;
+}
+
+.fbpcw-left .baloon-item-text,
+.fbpcw-right .baloon-item-text {
+	white-space: nowrap;
+	font-size: 16px;
+}
+
+.fbpcw-right {
+	justify-content: flex-start;
+}
+
+
+/*MOBILE*/
+.mobile .for-business-page-connectWith {
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: auto;
+	padding-top: 0;
+}
+
+.mobile .fbpcw-left {
+	display: none;
+}
+
+.mobile .fbpcw-center {
+	width: 100%;
+	padding-top: 0;
+}
+
+.mobile .fbpcw-right {
+	width: 100%;
+	justify-content: center;
+	align-items: flex-start;
+	height: 425px;
+	margin-top: 80px;
+}
+
+.mobile .fbpcw-comment {
+	width: 350px;
+}
