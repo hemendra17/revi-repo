@@ -7,7 +7,7 @@
     "setup": "npm install --legacy-peer-deps",
     "watch": "rd /s /q dist && SET NODE_ENV=development && .\\node_modules\\.bin\\webpack --config .\\config\\webpack.config.js --progress --watch",
     "dev": "set NODE_ENV=development && .\\node_modules\\.bin\\webpack serve --config .\\config\\webpack.config.js --progress",
-    "build": "set NODE_ENV=production && .\\node_modules\\.bin\\webpack --config .\\config\\webpack.config.js --progress"
+    "build": "set NODE_ENV=production && npx webpack --config ./config/webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "@babel/preset-react": "^7.12.7",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^6.4.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
     "html-loader": "^1.3.2",

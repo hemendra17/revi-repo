@@ -9,6 +9,7 @@ import page from './_configs/_common_configs/pageAddresses.js';
 import './css/main.css'
 import './css/bootstrap.css'
 import './css/bootstrap.min.css'
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 // import HomePage from "./_configs/homePage.js";
