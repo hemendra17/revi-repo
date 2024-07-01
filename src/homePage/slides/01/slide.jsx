@@ -1,177 +1,82 @@
+import Button from 'Common/button/buttonIndex.jsx';
+import TypedText from 'Common/typedText/typeTextIndex.jsx';
+import './slide.css';
 
-import Group_70_1 from '../../../images/Group 70 (1).png'
-import bg_image from '../../../images/bg-image.png'
-import desktop from '../../../images/SVG/all_svg_imagea/banner/desktop.svg'
-import mobileSvg from '../../../images/SVG/all_svg_imagea/banner/mobile.svg'
-import checkout_machine from '../../../images/SVG/all_svg_imagea/banner/checkout_machine.svg'
-import banner_image1 from '../../../images/SVG/all_svg_imagea/banner/banner_image1.svg'
-import banner_image2 from '../../../images/SVG/all_svg_imagea/banner/banner_image2.svg'
-import screen_4_bg_hills from '../../.././images/SVG/all_svg_imagea/tree_son_screen/screen_4_bg_hills.svg'
-import screen_1_sun from '../../.././images/SVG/all_svg_imagea/tree_son_screen/screen_1_sun.svg'
-import screen_3_lighttrees from "../../.././images/SVG/all_svg_imagea/tree_son_screen/screen_3_lighttrees.svg"
-import screen_2_blue_trees from "../../.././images/SVG/all_svg_imagea/tree_son_screen/screen_2_blue_trees.svg"
-import icon1 from "../../../images/icon1.png"
-import icon2 from "../../../images/icon-2.png"
-import icon3 from "../../../images/icon-3.png"
-import icon4 from "../../../images/icon-4.png"
+/// cafe title
+function CafeTitle({track, logo, title}) {
+	return (<div className={track.className} style={track.style}>
+				<img src={logo}/>
+				<span>{title}</span>
+			</div>);
+}
 
-
-export default function Slide1({ track, user = {}, config = {} }) {
-
-
-	return (
-		<>
-			{/* banner section start*/}
-			<section section className="hero" >
-				<div className="container">
-					<div className="row">
-						<div className="col-md-6">
-							<div className="ban_left">
-								<h1>Revenue on AutoPilot</h1>
-								<p>Don't Call it a Pos. Revi is the first to not only take transactions, but also drive new revenue automatically for businesses
-								</p>
-							</div>
-						</div>
-						<div className="col-md-6">
-							{/* <div class="ban_right">
-								<img src={Group_70_1} alt />
-							</div> */}
-							<div className="Topbanner-imageBox">
-								<div className="desktopSvg">
-									<img src={desktop} /></div>
-								<div className="mobileSvg">
-									<img src={mobileSvg} /></div>
-								<div className="checkmachineSvg">
-									<img src={checkout_machine} /></div>
-								<div className="bannerimageSvg1">
-									<img src={banner_image1} /></div>
-								<div className="bannerimageSvg2">
-									<img src={banner_image2} /></div>
-							</div>
-						</div>
-
-
-
-					</div>
+/// slided right item with info
+function ReviHelpInfo({track, data}) {
+	return (<div className={track.className} style={track.style}>
+				<img className="hp-0-cafe-main-right-heart" src={data.likePointUrl}/>
+				<div className="hp-0-cafe-main-right-about">
+					{data.explainTexts.map((text, i) => <div key={i} className="hp-0-cafe-main-right-text">{text}</div>)}
+					<Button config={{link: data.followLink, title: data.followLinkText}}/>
 				</div>
-			</section >
-			{/* banner section end*/}
-			{/* bg-image section start 
-			<section className="bg_image">
-				<img src={bg_image} alt />
-			</section>
-			 */}
+			</div>);
+}
 
-			<section className="sunBannersec">
-				<img src={screen_4_bg_hills} id="hillsBg" className="hillsBg" />
-				<img src={screen_1_sun} id="sun" className="sun" />
-				<img src={screen_3_lighttrees} id="lightTree" className="lightTree" />
-				<img src={screen_2_blue_trees} id="blueTree" className="blueTree" />
-			</section>
-
-
-			{/* bg-image section end */}
-
-			{/* <section className="revenue">
-				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<div className="rev_grid">
-								<div className="rev_single">
-									<div className="rs_image">
-										<img src="images/icon1.png" alt />
-									</div>
-									<div className="rs_content">
-										<h2>More Cutomers</h2>
-										<p>Seamlessly connect with nearby customers on the Revi app, and expand your reach through our ecosystem</p>
-									</div>
-								</div>
-								<div className="rev_single">
-									<div className="rs_image">
-										<img src="images/icon-2.png" alt />
-									</div>
-									<div className="rs_content">
-										<h2>Increase Tickets</h2>
-										<p>Experience growth in your average ticket value with Revi's intelligent recommendation system and reward platform.</p>
-									</div>
-								</div>
-								<div className="rev_single">
-									<div className="rs_image">
-										<img src="images/icon-3.png" alt />
-									</div>
-									<div className="rs_content">
-										<h2>Drive Repeat Visits</h2>
-										<p>Turn every customer interaction into lasting loyalty. Our advanced conversion and retargeting technologies ensure that your customers
-											keep coming back, driving business growth</p>
-									</div>
-								</div>
-								<div className="rev_single">
-									<div className="rs_image">
-										<img src="images/icon-4.png" alt />
-									</div>
-									<div className="rs_content">
-										<h2>Reduce Labor Cost</h2>
-										<p>Streamline your operations, allowing your staff to focus on what matters most-enhancing customer experience.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+/// Slide #1 -> typing text, images deck
+export default function Slide1({track, user={}, config={}}) {
+	return (<div className={`hp-0 ${user.mode || ''}`} data-scm-id="slide-01">
+				<div className="hp-0-left-top-0">
+					<TypedText className="hp-0-retext" retext={user.stage.retext} mode={user.mode}/>
+					<div className="hp-0-scroll-down">
+						<img 
+							className="hp-0-scroll-down-btn"
+							src={config.rollDownImage} 
+							alt="discover revi"
+						/>
+						Discover Revi
+					</div>					
 				</div>
-			</section> */}
-			<section className="revenue">
-				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<div className="rev_grid">
-								<div className="rev_single" data-aos="slide-up" data-aos-duration={1000} data-aos-easing="ease-in-out">
-									<div className="rs_image">
-										<img src={icon1} alt />
-									</div>
-									<div className="rs_content">
-										<h2>More Cutomers</h2>
-										<p>Seamlessly connect with nearby customers on the Revi app, and expand your reach through our ecosystem</p>
-									</div>
-								</div>
-								<div className="rev_single" data-aos="slide-up" data-aos-duration={1500} data-aos-easing="ease-in-out">
-									<div className="rs_image">
-										<img src={icon2} alt />
-									</div>
-									<div className="rs_content">
-										<h2>Increase Tickets</h2>
-										<p>Experience growth in your average ticket value with Revi's intelligent recommendation system and reward platform.</p>
-									</div>
-								</div>
-								<div className="rev_single" data-aos="slide-up" data-aos-duration={2000} data-aos-easing="ease-in-out">
-									<div className="rs_image">
-										<img src={icon3} alt />
-									</div>
-									<div className="rs_content">
-										<h2>Drive Repeat Visits</h2>
-										<p>Turn every customer interaction into lasting loyalty. Our advanced conversion and retargeting technologies ensure that your customers
-											keep coming back, driving business growth</p>
-									</div>
-								</div>
-								<div className="rev_single" data-aos="slide-up" data-aos-duration={2500} data-aos-easing="ease-in-out">
-									<div className="rs_image">
-										<img src={icon4} alt />
-									</div>
-									<div className="rs_content">
-										<h2>Reduce Labor Cost</h2>
-										<p>Streamline your operations, allowing your staff to focus on what matters most-enhancing customer experience.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+				<img src={user.stage.images[0]} className={track.b1i1.className} style={track.b1i1.style}/>
+				<img src={user.stage.images[1]} className={track.b1i2.className} style={track.b1i2.style}/>
+				<img src={user.stage.images[2]} className={track.b1i3.className} style={track.b1i3.style}/>
+				<img src={user.stage.images[3]} className={track.b1i4.className} style={track.b1i4.style}/>
+				<img src={user.stage.images[5]} className={track.b1i6.className} style={track.b1i6.style}/>
+				{/*main image*/}
+				<div className={track.userLogo.className} style={track.userLogo.style}></div>
+				{/*subscryption*/}
+				<div className="hp-0-right-top-subscrypt">
+					<span>{user.stage.subscription.name}</span>, 
+					<span style={{fontFamily: 'ObjectSansRegular'}}>{user.stage.subscription.city}</span>
 				</div>
-			</section>
 
+				{/*-------------*/}
 
-		</>
+				{/*User name block*/}
+				<div className={track.b1UserPlace.className} style={track.b1UserPlace.style}>{user.stage.subscription.name.split(' ')[0]}'s Places</div>
+				<div className={track.b1UserPlaceComment.className} style={track.b1UserPlaceComment.style}>{user.stage.discoverTitle}</div>
 
-
-
-
-	);
+				{/*Cafe images*/}
+				<div className={track.b1Cafe1.className} style={track.b1Cafe1.style}>
+					<CafeTitle track={track.b1CafeMainPoint} logo={config.connectWithBusiness.cafePointUrl} title={user.stage.cafes[0].title}/>
+				</div>
+				<div className={track.b1Cafe2.className} style={track.b1Cafe2.style}>
+					<CafeTitle track={track.b1CafeMainPoint} logo={config.connectWithBusiness.cafePointUrl} title={user.stage.cafes[1].title}/>
+				</div>
+				<div className={track.b1Cafe3.className} style={track.b1Cafe3.style}>
+					<CafeTitle track={track.b1CafeMainPoint} logo={config.connectWithBusiness.cafePointUrl} title={user.stage.cafes[2].title}/>
+				</div>
+				<div className={track.b1Cafe4.className} style={track.b1Cafe4.style}>
+					<CafeTitle track={track.b1CafeMainPoint} logo={config.connectWithBusiness.cafePointUrl} title={user.stage.cafes[3].title}/>
+				</div>
+				<div className={track.b1Cafe5.className} style={track.b1Cafe5.style}>
+					<CafeTitle track={track.b1CafeMainPoint} logo={config.connectWithBusiness.cafePointUrl} title={user.stage.cafes[4].title}/>
+				</div>
+				{/*main logo image*/}
+				<div className={track.b1CafeMain.className} style={track.b1CafeMain.style}>
+					<CafeTitle track={track.b1CafeMainPoint} logo={config.connectWithBusiness.cafePointUrl} title={user.stage.cafes[5].title}/>
+					{/* Connect with your ... */}
+					<div className={track.b1CafeMainLeft.className} style={track.b1CafeMainLeft.style}>{config.connectWithBusiness.mainText}</div>
+					{/* Revi help... */}
+					<ReviHelpInfo track={track.b1CafeMainRight} data={config.connectWithBusiness}/>
+				</div>
+			</div>);
 }

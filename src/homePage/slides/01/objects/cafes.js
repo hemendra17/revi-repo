@@ -1,4 +1,4 @@
-function template(user, index, cnt, x, y, steps) {
+ function template(user, index, cnt, x, y, steps) {
 	return {
 		className: 'hp-0-right-top-user-cafe',
 		style: {

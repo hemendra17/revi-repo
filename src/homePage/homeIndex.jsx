@@ -1,19 +1,28 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import Scm, { initProxy } from 'Hand/scm/scm.jsx';
-import throttle from 'lodash/throttle';
 
 import './hpCommon.css';
 
 /// Page scrolling scenarios handlers
 import slides from './slides/slidesIndex.js';
+import Sunbanner from './Sunbanner.jsx';
 
-// use mobile versions only
-import SwitchUser from './switchedUser/mobile.jsx';
-import QuickSelectScreen from './quickSelect/mobile.jsx';
-// use both versions
-import LetsCelebrateScreen from './letsCelebrate/letsCelebrateScreen.jsx';
-import ShareWithCommunity from './shareWithCommunity/shareWithCommunityScreen.jsx';
-
+// Lazy load components
+const SwitchUser = lazy(() => import('./switchedUser/mobile.jsx'));
+const QuickSelectScreen = lazy(() => import('./quickSelect/mobile.jsx'));
+const LetsCelebrateScreen = lazy(() => import('./letsCelebrate/letsCelebrateScreen.jsx'));
+const ShareWithCommunity = lazy(() => import('./shareWithCommunity/shareWithCommunityScreen.jsx'));
+const HomePage = lazy(() => import('./homepage.jsx'));
+const Revenue = lazy(() => import('./Revenue.jsx'));
+const Calltoaction = lazy(() => import('./Calltoaction.jsx'));
+const Checkout = lazy(() => import('./Checkout.jsx'));
+const Carousel = lazy(() => import('./Carousel.jsx'));
+const CircleSection = lazy(() => import('./CircleSection.jsx'));
+const Boxsection = lazy(() => import('./Boxsection.jsx'));
+const Sectionbutton = lazy(() => import('./Sectionbutton.jsx'));
+const BackOnCome = lazy(() => import('./BackOnCome.jsx'));
+const Buttongrp = lazy(() => import('./buttongrp.jsx'));
+const Team = lazy(() => import('./Team.jsx'));
 
 /**
  * Home page index (desktop version)
@@ -23,93 +32,103 @@ import ShareWithCommunity from './shareWithCommunity/shareWithCommunityScreen.js
  * @return {Object}                 React element object
  */
 export default function ({ config = {}, appConfig = {}, isMobile = false }) {
-	// moving elements positions 
-	const [pos, updatePos] = useState(initProxy());
-	// user id
-	const [userId, updateUserId] = useState(() => Math.floor(Math.random() * config.users.length)); // useState(1); //
-	// user data
-	const user = config.users[userId];
-	// quickly select data, order on premise - merged data
-	const qssData = Object.assign({}, config.quickSelect, user.toQuickSelect);
-	// scenario extraction
-	const scenes = (cUser) => slides.scenarios(config, cUser, qssData)
-	// current scenario
-	const [scenario, updateScenario] = useState(scenes(user));
+  // moving elements positions
+  const [pos, updatePos] = useState(initProxy());
+  // user id
+  const [userId, updateUserId] = useState(() =>
+    Math.floor(Math.random() * config.users.length)
+  );
+  // user data
+  const user = config.users[userId];
+  // quickly select data, order on premise - merged data
+  const qssData = Object.assign({}, config.quickSelect, user.toQuickSelect);
+  // scenario extraction
+  const scenes = (cUser) => slides.scenarios(config, cUser, qssData);
+  // current scenario
+  const [scenario, updateScenario] = useState(scenes(user));
 
-	// on element create
-	useEffect(() => {
-		// on user switch this code will run
-		// starts only for desktop version
-		let interval = setTimeout(() => {
-			if (pageYOffset < 100) {
-				const nextUserId = userId >= config.users.length - 1 ? 0 : userId + 1;
-				const nextUserData = config.users[nextUserId];
-				const newScenario = scenes(nextUserData);
+  // on element create
+  useEffect(() => {
+    // on user switch this code will run
+    // starts only for desktop version
+    let interval = setTimeout(() => {
+      if (pageYOffset < 100) {
+        const nextUserId = userId >= config.users.length - 1 ? 0 : userId + 1;
+        const nextUserData = config.users[nextUserId];
+        const newScenario = scenes(nextUserData);
 
-				// update user id and scenario
-				updateUserId(nextUserId);
-				updateScenario(newScenario);
-			}
-		}, config.userSwitchInterval);
+        // update user id and scenario
+        updateUserId(nextUserId);
+        updateScenario(newScenario);
+      }
+    }, config.userSwitchInterval);
 
-		// destructor
-		return () => {
-			clearTimeout(interval);
-		}
-	});
+    // destructor
+    return () => {
+      clearTimeout(interval);
+    };
+  });
 
-	// update style on scroll
-	function onScroll(data) {
-		updatePos(data);
-	}
+  // update style on scroll
+  function onScroll(data) {
+    updatePos(data);
+  }
 
-	// triggers
-	const popConfetti = Boolean(pos.celebrate.triggers && pos.celebrate.triggers.start);
-	const openShareBalloons = Boolean(pos.share.triggers && pos.share.triggers.open);
-	// page behavior setup
-	const pageSetup = {
-		isMobile,
-		menuLogoClick: () => window.moveTo(0, 0),
-		menuCollapseLogo: () => false,
-		menuLightMode: (offset, isMobile, $) => isMobile
-			? false
-			: $.oneOfRange(offset, [3830, 6100], [8120, 10000]),
-		menuTransparent: (offset, isMobile, $) => isMobile
-			? false
-			: $.oneOfRange(offset, [0, 3830], [6700, 9300]),
-		transitBoundaries: slides.quickTransitions
-	};
+  // triggers
+  const popConfetti = Boolean(pos.celebrate.triggers && pos.celebrate.triggers.start);
+  const openShareBalloons = Boolean(pos.share.triggers && pos.share.triggers.open);
+  // page behavior setup
+  const pageSetup = {
+    isMobile,
+    menuLogoClick: () => window.moveTo(0, 0),
+    menuCollapseLogo: () => false,
+    menuLightMode: (offset, isMobile, $) =>
+      isMobile ? false : $.oneOfRange(offset, [3830, 6100], [8120, 10000]),
+    menuTransparent: (offset, isMobile, $) =>
+      isMobile ? false : $.oneOfRange(offset, [0, 3830], [6700, 9300]),
+    transitBoundaries: slides.quickTransitions,
+  };
 
-
-
-	useEffect(() => {
-		const handleScroll = throttle(() => {
-			let value = window.scrollY;
-			document.getElementById('sun').style.top = value * 0.2 + 'px';
-			document.getElementById('hillsBg').style.top = value * -0.1 + 'px';
-			document.getElementById('lightTree').style.top = value * -0.1 + 'px';
-		}, 100); // adjust the delay as needed
-
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
-
-
-	// render
-	return (<Scm className="" scenarios={scenario} scroll={onScroll} appConfig={appConfig} setup={pageSetup}>
-
-		<slides.Slide1 config={config} user={user} track={pos} />
-		<slides.Slide2 config={config} data={qssData} track={pos} />
-		{/* slide 1
-		{isMobile
-		? <SwitchUser user={user} config={config} />
-		:
-		{isMobile
-		? <QuickSelectScreen data={qssData} />
-		: <slides.Slide2 config={config} data={qssData} track={pos} />}
-		<LetsCelebrateScreen firstShow={popConfetti} user={user} config={config.letsCelebrate} isMobile={isMobile} />
-		<ShareWithCommunity openStep={openShareBalloons} data={config.share} user={user} isMobile={isMobile} /> */}
-	</Scm>);
+  // render
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Scm
+        className="hp--wrap"
+        scenarios={scenario}
+        scroll={onScroll}
+        appConfig={appConfig}
+        setup={pageSetup}
+      >
+        <HomePage isMobile={isMobile} />
+        <Sunbanner />
+        <Revenue isMobile={isMobile} />
+        <Sectionbutton />
+        <BackOnCome />
+        <Buttongrp />
+        <Team />
+        <CircleSection />
+        <Boxsection />
+        <Checkout />
+        <Carousel />
+        <Calltoaction isMobile={isMobile} />
+        {/* {isMobile ? (
+          <QuickSelectScreen data={qssData} />
+        ) : (
+          <slides.Slide2 config={config} data={qssData} track={pos} />
+        )} */}
+        {/* <LetsCelebrateScreen
+          firstShow={popConfetti}
+          user={user}
+          config={config.letsCelebrate}
+          isMobile={isMobile}
+        />
+        <ShareWithCommunity
+          openStep={openShareBalloons}
+          data={config.share}
+          user={user}
+          isMobile={isMobile}
+        /> */}
+      </Scm>
+    </Suspense>
+  );
 }

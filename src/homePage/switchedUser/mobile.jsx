@@ -20,7 +20,7 @@ import './userSwitchMobile.css';
  * @param {Object} props.step  	 Current step
  * @param {Object} props.config	Config of home page
  */
-export default function SwitchUserMobile({user, step, config}) {
+export default function  SwitchUserMobile({user, step, config}) {
 	// for checking if we on "and connect" element
 	const [inConnect, updateInConnect] = useState(false);
 	

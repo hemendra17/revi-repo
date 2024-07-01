@@ -60,6 +60,7 @@ export default {
 			mute:1
 		} 
 	},
+	
 	stickyMenu: ['On Premise', 'Benefits', 'Digital Menus', 'Order Ahead', 'Kitchen Kit', 'Connect', 'Dashboard'], 
 	openForBusiness: {
 		header: 'Open for business',

@@ -101,7 +101,6 @@ import niami_pork_belly_tabletop_grill from './assets/homePage/niami/toQuickSele
 import niami_pork_belly from './assets/homePage/niami/toQuickSelect/pork belly@2x.jpg';
 import niami_soon_dubu from './assets/homePage/niami/toQuickSelect/soon dubu@2x.jpg';
 
-
 // common configs
 import happyFriends from './_common_configs/happyFriends.js';
 import getStarted from './_common_configs/getStarted.js';

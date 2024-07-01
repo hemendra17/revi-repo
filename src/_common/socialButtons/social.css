@@ -1,9 +1,11 @@
 .social-icons {
-/*	display: flex;
+/* 
+display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
-*/}
+*/
+} 
 
 .social-icons img {
 	margin: 0 20px 14px 0;

@@ -28,7 +28,6 @@ import contacts from './_configs/contacts.js';
 /// PRIVACY POLICY PAGE
 import privacyPolicy from './_configs/privacyPolicy.js';
 
-// config
 export default {
 	menu,
 	footer,

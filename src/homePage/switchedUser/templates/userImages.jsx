@@ -43,4 +43,4 @@ export default function UserImages({images, subscript, pos, size, step, userId})
 			<span className="userswitcher--stage-right-subscript-city"> {subscript.city}</span>
 		</div>
 	</>);
-}
+} 
