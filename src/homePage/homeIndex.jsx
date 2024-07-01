@@ -6,6 +6,17 @@ import './hpCommon.css';
 /// Page scrolling scenarios handlers
 import slides from './slides/slidesIndex.js';
 import Sunbanner from './Sunbanner.jsx';
+// import HomePage from './homepage.jsx';
+// import Revenue from './Revenue.jsx';
+// import Sectionbutton from './Sectionbutton.jsx';
+// import BackOnCome from './BackOnCome.jsx';
+// import Buttongrp from './Buttongrp.jsx';
+// import Team from './Team.jsx';
+// import CircleSection from './CircleSection.jsx';
+// import Boxsection from './Boxsection.jsx';
+// import Checkout from './Checkout.jsx';
+// import Carousel from './Carousel.jsx';
+// import Calltoaction from './Calltoaction.jsx';
 
 // Lazy load components
 const SwitchUser = lazy(() => import('./switchedUser/mobile.jsx'));
@@ -21,7 +32,7 @@ const CircleSection = lazy(() => import('./CircleSection.jsx'));
 const Boxsection = lazy(() => import('./Boxsection.jsx'));
 const Sectionbutton = lazy(() => import('./Sectionbutton.jsx'));
 const BackOnCome = lazy(() => import('./BackOnCome.jsx'));
-const Buttongrp = lazy(() => import('./buttongrp.jsx'));
+const Buttongrp = lazy(() => import('./Buttongrp.jsx'));
 const Team = lazy(() => import('./Team.jsx'));
 
 /**
