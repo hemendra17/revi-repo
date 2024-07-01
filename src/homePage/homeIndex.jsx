@@ -6,7 +6,7 @@ import './hpCommon.css';
 /// Page scrolling scenarios handlers
 import slides from './slides/slidesIndex.js';
 import Sunbanner from './Sunbanner.jsx';
-// import HomePage from './homepage.jsx';
+// import HomePage from './HomePage.jsx';
 // import Revenue from './Revenue.jsx';
 // import Sectionbutton from './Sectionbutton.jsx';
 // import BackOnCome from './BackOnCome.jsx';
@@ -23,7 +23,7 @@ const SwitchUser = lazy(() => import('./switchedUser/mobile.jsx'));
 const QuickSelectScreen = lazy(() => import('./quickSelect/mobile.jsx'));
 const LetsCelebrateScreen = lazy(() => import('./letsCelebrate/letsCelebrateScreen.jsx'));
 const ShareWithCommunity = lazy(() => import('./shareWithCommunity/shareWithCommunityScreen.jsx'));
-const HomePage = lazy(() => import('./homepage.jsx'));
+const HomePage = lazy(() => import('./HomePage.jsx'));
 const Revenue = lazy(() => import('./Revenue.jsx'));
 const Calltoaction = lazy(() => import('./Calltoaction.jsx'));
 const Checkout = lazy(() => import('./Checkout.jsx'));
