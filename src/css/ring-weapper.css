@@ -1,0 +1,88 @@
+section.circle-image {
+  background: linear-gradient(to bottom, #1b3168 0%, #2020df 37%);
+  padding-top: 80px;
+  /* height: 50vh; */
+  padding-bottom: 25px;
+  transition: transform 1.25s, padding-bottom 2.25s;
+}
+section.circle-image .expanded {
+  /* height: 50vh; */
+  padding-bottom: 250px;
+}
+
+.ring-wrapper {
+  position: relative;
+  display: block;
+  width: 850px;
+  height: 550px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: transform 1.25s, height 2.25s;
+}
+
+.ring-wrapper.expanded {
+  height: 100vh;
+  overflow: visible;
+}
+
+.ring {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  transition: transform 1.25s, box-shadow 1.25s;
+  border-radius: 0%;
+}
+.layer-1 {
+  width: 850px;
+  border-radius: 100%;
+}
+
+.cent_text {
+  position: absolute;
+  color: #fff;
+  width: 52%;
+  text-align: center;
+  top: 37%;
+  left: 24.5%;
+  font-family: "Poppins", sans-serif;
+  transition: transform 1.25s, top 1.25s;
+}
+
+.cent_text h2 {
+  font-size: 20px;
+  line-height: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.cent_text p {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+
+.cent_text .expanded {
+  top: 47%;
+  /* bottom: 0; */
+}
+
+.ring-display {
+  width: 100%;
+  height: 30%;
+  display: block;
+  position: absolute;
+  top: 85%;
+  bottom: 0;
+  border-radius: 0%;
+  transition: transform 1s ease, width 1.25s;
+}
+
+.ring-display.expanded {
+  width: 100%;
+  height: 99%;
+  top: 0;
+  /* transform: rotate(-360deg); */
+  /* left: 50%; */
+}

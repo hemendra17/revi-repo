@@ -1,12 +1,13 @@
-import {HashRouter as Router, Switch, Route} from "react-router-dom";
-import {useState, useEffect, useMemo} from 'react';
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { useState, useEffect, useMemo } from 'react';
 // lazy loading
-import {Suspense, lazy} from 'react';
+import { Suspense, lazy } from 'react';
 // Functionality imports
-import {isMobile, setAppPresets} from 'Common/functionality.js';
+import { isMobile, setAppPresets } from 'Common/functionality.js';
 // addresses
 import page from './_configs/_common_configs/pageAddresses.js';
 import './css/main.css'
+import './css/ring-weapper.css'
 import './css/bootstrap.css'
 import './css/bootstrap.min.css'
 
@@ -53,33 +54,33 @@ function createRouting(appConfig) {
 	// page index array
 	const pageIndex = [
 		// home
-		{element: HomePage, url: page.HOME, configKey: 'homePage'},
+		{ element: HomePage, url: page.HOME, configKey: 'homePage' },
 		// for business
-		{element: ForBusinessPage, url: page.BUSINESS, configKey: 'buisness'},
-		{element: ForBusinessPage, url: page.BUSINESS_PROD_MASK, configKey: 'buisness'},
+		{ element: ForBusinessPage, url: page.BUSINESS, configKey: 'buisness' },
+		{ element: ForBusinessPage, url: page.BUSINESS_PROD_MASK, configKey: 'buisness' },
 		// app
-		{element: AppPage, url: page.APP, configKey: 'app'},
+		{ element: AppPage, url: page.APP, configKey: 'app' },
 		// stories
-		{element: StoriesPage, url: page.STORIES, configKey: 'stories'},
+		{ element: StoriesPage, url: page.STORIES, configKey: 'stories' },
 		// about
-		{element: AboutPage, url: page.ABOUT, configKey: 'about'},
-		{element: AboutPage, url: page.ABOUT_MASK, configKey: 'about'},
+		{ element: AboutPage, url: page.ABOUT, configKey: 'about' },
+		{ element: AboutPage, url: page.ABOUT_MASK, configKey: 'about' },
 		// contacts
-		{element: ContactPage, url: page.CONTACT, configKey: 'contacts'},
+		{ element: ContactPage, url: page.CONTACT, configKey: 'contacts' },
 		// schedule demo
-		{element: ScheduleDemoPage, url: page.SCHEDULE, configKey: 'scheduleDemo'},
+		{ element: ScheduleDemoPage, url: page.SCHEDULE, configKey: 'scheduleDemo' },
 		// privacy policy
-		{element: PrivacyPolicyPage, url: page.PRIVACY, configKey: 'privacyPolicy'},
+		{ element: PrivacyPolicyPage, url: page.PRIVACY, configKey: 'privacyPolicy' },
 	];
 
 	// create pages for app
 	const pages = pageIndex.map((item, index) => {
-		const elementConfig = Object.assign({}, everyPageConfig, {config: appConfig[item.configKey]});
+		const elementConfig = Object.assign({}, everyPageConfig, { config: appConfig[item.configKey] });
 		const element = React.createElement(item.element, elementConfig, null);
 
-		return item.url === page.home 
-			? <Route key={index} path={item.url}>{element}</Route> 
-			: <Route exact key={index} path={item.url}>{element}</Route>;		
+		return item.url === page.home
+			? <Route key={index} path={item.url}>{element}</Route>
+			: <Route exact key={index} path={item.url}>{element}</Route>;
 	});
 
 	return (<Switch>{pages}</Switch>);
@@ -106,8 +107,8 @@ function App() {
 	useEffect(() => {
 		function onResize(evt) {
 			// first ON-RESIZE - could be failed (before config loaded)
-			if(config) {
-				updateConfig(Object.assign({_resizeOn: Date.now()}, config));
+			if (config) {
+				updateConfig(Object.assign({ _resizeOn: Date.now() }, config));
 			}
 			// every resize app should be updated
 			setAppPresets(ROOT);
@@ -121,11 +122,11 @@ function App() {
 
 	// render
 	return (<Router>
-				<Suspense fallback={<div>Loading...</div>}>
-					{routing}
-				</Suspense>
-			</Router>);
+		<Suspense fallback={<div>Loading...</div>}>
+			{routing}
+		</Suspense>
+	</Router>);
 }
 
 // render the app
-ReactDOM.render(<App/>, ROOT);
+ReactDOM.render(<App />, ROOT);

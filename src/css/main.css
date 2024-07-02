@@ -446,31 +446,6 @@ section.button-grp {
 }
 /* button-grp css end*/
 /* Circel-image css start*/
-.ring-wrapper {
-  position: relative;
-  display: block;
-  width: 850px;
-  height: 850px;
-  margin: 0 auto;
-}
-
-.ring {
-  display: block;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 0;
-  transition: transform 0.25s, box-shadow 0.25s;
-  border-radius: 0%;
-}
-
-.ring-display {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 0%;
-  position: absolute;
-}
 
 .interaction {
   width: 100%;
@@ -485,12 +460,6 @@ section.button-grp {
   transition: box-shadow 0.25s;
 }
 
-.layer-1 {
-  width: 850px;
-  height: 700px;
-  border-radius: 100%;
-}
-
 .label {
   top: 50%;
   width: 100%;
@@ -498,7 +467,7 @@ section.button-grp {
   text-align: center;
   transform-origin: 50% 0;
   position: absolute;
-  //transform:rotate(0deg) translate(0, -50%);
+  transform: rotate(0deg) translate(0, -50%);
   pointer-events: none;
   color: #000 !important;
   line-height: 122px;
@@ -531,7 +500,7 @@ section.button-grp {
 
 .label:nth-child(1) {
   transform: rotate(0deg) translate(0, -50%);
-  //transform: rotate(360deg) translate(0, -50%);
+  /* //transform: rotate(360deg) translate(0, -50%); */
 }
 
 .label:nth-child(2) {
@@ -583,7 +552,7 @@ section.button-grp {
   color: #fff;
   width: 52%;
   text-align: center;
-  top: 37%;
+  top: 7%;
   left: 24.5%;
   font-family: "Poppins", sans-serif;
 }
@@ -602,7 +571,8 @@ section.button-grp {
 
 section.circle-image {
   background: linear-gradient(to bottom, #1b3168 0%, #2020df 37%);
-  padding-top: 130px;
+  padding-top: 80px;
+  /* height: 50vh; */
   padding-bottom: 25px;
 }
 /* .circle-image::before {
@@ -615,13 +585,13 @@ section.circle-image {
   width: 100%;
   height: 100%;
 } */
-.circle-image .content h4 {
+.circle-image .content h2 {
   font-family: "Poppins", sans-serif !important;
   font-weight: 800 !important;
   color: #ffffff !important;
   text-transform: capitalize !important;
-  font-size: 24px !important;
-  line-height: 48px !important;
+  font-size: 4px !important;
+  line-height: 8px !important;
   letter-spacing: 0.5px !important;
 }
 .circle-image .content p {
@@ -1507,6 +1477,7 @@ body {
     font-size: 10px;
     padding: 2px 16px;
     transform: rotate(121deg);
+    /* transition: ease-in-out; */
   }
   .cent_text {
     position: initial !important;
@@ -1517,10 +1488,10 @@ body {
     width: 370px;
     height: 335px;
   }
-  section.circle-image {
-    padding-top: 35px;
+  /* section.circle-image {
+    padding-top: 3544px;
     padding-bottom: 375px;
-  }
+  } */
   .calltoaction:after {
     height: 160px;
     top: auto;
