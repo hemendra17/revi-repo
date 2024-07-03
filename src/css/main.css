@@ -710,15 +710,17 @@ section.box-sec {
 section.team {
   background: #eaeaea;
   padding-top: 75px;
+  padding-bottom: 100px;
   position: relative;
+
   overflow: hidden;
 }
 
 .team::before {
   content: "";
   position: absolute;
-  background-image: url(../images/Ellipse-17.png);
-  background-repeat: no-repeat;
+  /* background-image: url(../images/Ellipse-17.png);
+      background-repeat: no-repeat; */
   background-size: 50%;
   width: 75%;
   height: 700px;
@@ -746,7 +748,6 @@ section.team {
   width: 55px;
   height: 55px;
 }
-
 .ts_r h2 {
   font-weight: 700 !important;
   color: #000000 !important;
@@ -766,14 +767,12 @@ section.team {
   transition: 0.5s ease;
   padding-right: 60px;
 }
-.team-single:hover .ts_r p {
-  opacity: 1;
-  transition: 0.5s ease;
-}
+
 .quote-cover {
   text-align: center;
   font-family: "Poppins", sans-serif !important;
-  padding-bottom: 45px;
+  padding-bottom: 70px;
+  padding-top: 70px;
 }
 .quote-cover img {
   width: 120px;
@@ -794,6 +793,175 @@ section.team {
 }
 
 /* Team-sec css end*/
+
+.circleScale {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.circleScale::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: border-pulse 2s infinite;
+}
+.circleScale1::after {
+  border: 1px solid #ceead6; /* Border color */
+}
+.circleScale2::after {
+  border: 1px solid #f5e09b; /* Border color */
+}
+.circleScale3::after {
+  border: 1px solid #f8d2ce; /* Border color */
+}
+.circleScale4::after {
+  border: 1px solid #d2e3fc; /* Border color */
+}
+.circleScale5::after {
+  border: 1px solid #ff4f21; /* Border color */
+}
+.circleScale6::after {
+  border: 1px solid red; /* Border color */
+}
+
+.circleScale i {
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 50%;
+  padding: 20px;
+  position: relative;
+  z-index: 3;
+}
+.circleScale1 i {
+  background: #ceead6;
+}
+.circleScale2 i {
+  background: #f5e09b;
+}
+.circleScale3 i {
+  background: #f8d2ce;
+}
+.circleScale4 i {
+  background: #d2e3fc;
+}
+.circleScale5 i {
+  background: #ff4f21;
+}
+.circleScale6 i {
+  background: red;
+}
+
+.circleScale:hover i {
+  transform: scale(1.2);
+  background: white;
+  color: #656565;
+}
+
+.circleScale::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.5s ease-in-out; /* Smooth transition for background expansion */
+  z-index: 1;
+  pointer-events: none; /* Make sure this doesn't interfere with pointer events */
+}
+.circleScale1::before {
+  background-color: #ceead6;
+}
+.circleScale2::before {
+  background-color: #f5e09b;
+}
+.circleScale3::before {
+  background-color: #f8d2ce;
+}
+.circleScale4::before {
+  background-color: #d2e3fc;
+}
+.circleScale5::before {
+  background-color: #ff4f21;
+}
+.circleScale6::before {
+  background-color: red;
+}
+
+.circleScale1:hover::before {
+  transform: translate(-160%, -160%) scale(12);
+  overflow: hidden; /* Prevent scrollbars */
+}
+.circleScale2:hover::before {
+  transform: translate(-119%, -120%) scale(11);
+  overflow: hidden; /* Prevent scrollbars */
+}
+.circleScale3:hover::before {
+  transform: translate(30%, -160%) scale(12);
+  overflow: hidden; /* Prevent scrollbars */
+}
+.circleScale4:hover::before {
+  transform: translate(-160%, 160%) scale(12);
+  overflow: hidden; /* Prevent scrollbars */
+}
+.circleScale5:hover::before {
+  transform: translate(-90%, 160%) scale(10);
+  overflow: hidden; /* Prevent scrollbars */
+}
+.circleScale6:hover::before {
+  transform: translate(60%, 160%) scale(12);
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Pulse animations */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes border-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.circleScaleInnerTxt {
+  position: absolute;
+  z-index: 4;
+}
+.circleScaleInnerimg {
+  position: relative;
+  z-index: 4;
+}
 
 /* Checkout css start*/
 section.checkout {
@@ -909,7 +1077,7 @@ section.carousel-sec {
   padding: 75px 0;
   height: 446px;
 }
-.calltoaction:after {
+.calltoaction::after {
   height: 446px;
   width: 70%;
   background-size: cover;
