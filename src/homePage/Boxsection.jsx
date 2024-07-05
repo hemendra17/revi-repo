@@ -19,7 +19,7 @@ export default function Boxsection() {
 
   return (
     <>
-      <section className="box-sec" ref={ref}>
+      <section className="box-sec"   ref={ref}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">

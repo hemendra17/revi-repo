@@ -3,7 +3,7 @@ import React from 'react'
 export default function Calltoaction() {
   return (
     <>
-      <section className="calltoaction">
+      <section className="calltoaction" id='nichewala'>
         <div className="container">
           <div className="row">
             <div className="col-md-6">

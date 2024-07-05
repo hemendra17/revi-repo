@@ -1,13 +1,12 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
   scroll-behavior: smooth;
-  
 }
 
 body.carousel-scroll-lock {
@@ -110,9 +109,9 @@ ul.nav li a {
   text-transform: uppercase !important;
   letter-spacing: 0.5px !important;
 }
-ul.nav li a:hover{
-  background:transparent;
-  color: #ff4f21!important;;
+ul.nav li a:hover {
+  background: transparent;
+  color: #ff4f21 !important;
 }
 .icon_btn a {
   font-family: "Poppins", sans-serif !important;
@@ -162,7 +161,7 @@ section.hero {
   text-transform: uppercase !important;
   letter-spacing: 0.5px !important;
   font-size: 41px !important;
-  margin-bottom:15px;
+  margin-bottom: 15px;
 }
 section.hero:before {
   content: "";
@@ -202,7 +201,7 @@ section.hero:before {
 }
 .ban_left {
   padding-top: 80px;
-  padding-left:40px;
+  padding-left: 40px;
 }
 
 /* banner css end*/
@@ -292,7 +291,7 @@ section.revenue {
 section.button {
   padding: 65px 0px;
   background: #1b3168;
-  display:none;
+  display: none;
 }
 .btn_cover {
   background: #ffd74d;
@@ -429,7 +428,7 @@ section.button {
 section.button-grp {
   padding: 50px 0px;
   background: #1b3168;
-  display:none;
+  display: none;
 }
 .button-grp .btn_cover {
   background: #ffd74d;
@@ -460,6 +459,36 @@ section.button-grp {
 }
 /* button-grp css end*/
 /* Circel-image css start*/
+.ring-wrapper {
+  position: relative;
+  display: flex;
+  width: 870px;
+  height: 870px;
+  margin: 0 auto;
+  transform: scale(1);
+}
+
+.ring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border-radius: 0%;
+}
+
+.ring-display {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 0%;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+}
 
 .interaction {
   width: 100%;
@@ -472,6 +501,12 @@ section.button-grp {
 
 .ring:hover + .ring {
   transition: box-shadow 0.25s;
+}
+
+.layer-1 {
+  width: 850px;
+  height: 700px;
+  border-radius: 100%;
 }
 
 .label {
@@ -514,7 +549,7 @@ section.button-grp {
 
 .label:nth-child(1) {
   transform: rotate(0deg) translate(0, -50%);
-  /* //transform: rotate(360deg) translate(0, -50%); */
+  transform: rotate(360deg) translate(0, -50%);
 }
 
 .label:nth-child(2) {
@@ -566,52 +601,41 @@ section.button-grp {
   color: #fff;
   width: 52%;
   text-align: center;
-  top: 7%;
+  top: 37%;
   left: 24.5%;
   font-family: "Poppins", sans-serif;
 }
+
 .cent_text h2 {
   font-size: 20px;
   line-height: 38px;
   font-weight: 700;
   margin-bottom: 10px;
 }
+
 .cent_text p {
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
   margin-top: 0px;
 }
-.ring-display.expanded{
-  height:114%!important;
-}
 
 section.circle-image {
-  background: #2020fd!important;
-  padding-top: 130px;
-  /* height: 50vh; */
-
-  padding-bottom: 25px;
+  background: #2020fd !important;
+  padding-top: 60px;
+  height: 95vh;
 }
-/* .circle-image::before {
-  content: '';
-  position: absolute;
-  background-image: url(../images/circle_image.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 55% 100%;
-  width: 100%;
-  height: 100%;
-} */
-.circle-image .content h2 {
+
+.circle-image .content h4 {
   font-family: "Poppins", sans-serif !important;
   font-weight: 800 !important;
   color: #ffffff !important;
   text-transform: capitalize !important;
-  font-size: 4px !important;
-  line-height: 8px !important;
+  font-size: 24px !important;
+  line-height: 48px !important;
   letter-spacing: 0.5px !important;
 }
+
 .circle-image .content p {
   font-family: "Poppins", sans-serif !important;
   font-weight: 500 !important;
@@ -620,21 +644,13 @@ section.circle-image {
   font-size: 15px !important;
   line-height: 32px !important;
 }
-/* .circle-image::before {
-  content: '';
-  position: absolute;
-  background-image: url(../images/circle_image.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 55% 100%;
-  width: 100%;
-  height: 100%;
-} */
+
 .circle-image .content {
   max-width: 551px;
   margin: 0 auto;
   text-align: center;
 }
+
 /* .circle {
   text-align: center;
 }
@@ -645,7 +661,7 @@ section.circle-image {
 
 /* box-sec css start*/
 section.box-sec {
-  background: #2020FD;
+  background: #2020fd;
   padding-bottom: 105px;
   margin-top: -2px;
 }
@@ -716,9 +732,8 @@ section.box-sec {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 35px;
   grid-row-gap: 35px;
-  padding-top:13em;
+  padding-top: 13em;
 }
-
 
 /* box-sec css end*/
 
@@ -790,7 +805,7 @@ section.team {
   padding-bottom: 70px;
   padding-top: 70px;
   position: relative;
-  z-index:999;
+  z-index: 999;
 }
 .quote-cover img {
   width: 120px;
@@ -835,26 +850,23 @@ section.team {
   animation: border-pulse 2s infinite;
 }
 .circleScale1::after {
-  border: 1px solid #F7CF4D; /* Border color */
+  border: 1px solid #f7cf4d; /* Border color */
 }
 .circleScale2::after {
-  border: 1px solid #FF4F21; /* Border color */
+  border: 1px solid #ff4f21; /* Border color */
 }
 .circleScale3::after {
-  border: 1px solid #2020FD; /* Border color */
+  border: 1px solid #2020fd; /* Border color */
 }
 .circleScale4::after {
-  border: 1px solid #A3C5FC; /* Border color */
+  border: 1px solid #a3c5fc; /* Border color */
 }
 .circleScale5::after {
-  border: 1px solid #D0E2FF; /* Border color */
+  border: 1px solid #d0e2ff; /* Border color */
 }
 .circleScale6::after {
   border: 1px solid #959595; /* Border color */
 }
-
-
-
 
 .circleScale i {
   font-size: 1.5rem;
@@ -865,13 +877,13 @@ section.team {
   z-index: 3;
 }
 .circleScale1 i {
-  background: #F7CF4D;
+  background: #f7cf4d;
 }
 .circleScale2 i {
   background: #ff4f21;
 }
 .circleScale3 i {
-  background: #2020FD;
+  background: #2020fd;
 }
 .circleScale4 i {
   background: #a3c5fc;
@@ -880,7 +892,7 @@ section.team {
   background: #d0e2ff;
 }
 .circleScale6 i {
-  background: #959595
+  background: #959595;
 }
 
 .circleScale:hover i {
@@ -903,7 +915,7 @@ section.team {
   pointer-events: none; /* Make sure this doesn't interfere with pointer events */
 }
 .circleScale1::before {
-  background-color: #F7CF4D;
+  background-color: #f7cf4d;
 }
 .circleScale2::before {
   background-color: #ff4f21;
@@ -1031,7 +1043,7 @@ section.checkout {
 
 /* carousel css start */
 section.carousel-sec {
-  background: #1F3575;
+  background: #1f3575;
   padding: 110px 0px;
 }
 .c_img img {
@@ -1097,14 +1109,13 @@ section.carousel-sec {
   position: relative;
   padding: 75px 0;
   height: 446px;
-  
 }
 
 .calltoaction::after {
   height: 446px;
   width: 70%;
-  background-size:100%!important;
-  background:url(../images/Rectangle-96.png);
+  background-size: 100% !important;
+  background: url(../images/Rectangle-96.png);
   position: absolute;
   right: 0;
   top: 0;
@@ -1244,7 +1255,7 @@ body {
   margin-bottom: 0px;
 }
 .copyright {
-  background: #1F3575;
+  background: #1f3575;
   padding: 12px 0;
 }
 .copyright p {

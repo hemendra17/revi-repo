@@ -74,7 +74,7 @@ export default function BackOnCome() {
   return (
     <>
    <div>
-  <section className="back-one back_com">
+  <section className="back-one back_com" id='1'>
     <div className="container">
       <div className="row">
         <div className="col-md-12">

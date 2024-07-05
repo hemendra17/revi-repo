@@ -7,7 +7,7 @@ import { isMobile, setAppPresets } from 'Common/functionality.js';
 // addresses
 import page from './_configs/_common_configs/pageAddresses.js';
 import './css/main.css'
-import './css/ring-weapper.css'
+// import './css/ring-weapper.css'
 import './css/bootstrap.css'
 import './css/bootstrap.min.css'
 
@@ -25,6 +25,8 @@ const AboutPage = lazy(() => import('./aboutPage/aboutIndex.jsx'));
 const ScheduleDemoPage = lazy(() => import('./scheduleDemo/scheduleDemoIndex.jsx'));
 const ContactPage = lazy(() => import('./contactsPage/contactIndex.jsx'));
 const PrivacyPolicyPage = lazy(() => import('./privacyPolicyPage/PrivacyPolicyPage.jsx'));
+
+
 
 /*
 	App preferences

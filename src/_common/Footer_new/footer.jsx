@@ -7,7 +7,7 @@ import footer_logo from '../../images/footer_logo.png'
 export default function footer() {
   return (
     <>
-<div>
+<div id='footer'>
   <footer>
     <div className="container">
       <div className="row">

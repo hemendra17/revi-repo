@@ -1,62 +1,79 @@
-
-
-
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function CircleSection() {
-  const [expanded, setExpanded] = useState(false);
-  const sectionRef = useRef(null);
+  const joker = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: joker,
+    offset: ['end center', 'start start',],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 0.6]);
+  const scale2 = useTransform(scrollYProgress, [0, 1], [0.7, 0.9]);
+  const smoothScaleInView = useSpring(scale, { stiffness: 200, damping: 20 });
+  const smoothScaleOutOfView = useSpring(0.3, { stiffness: 300, damping: 30 });
+  const smoothScaleInView2 = useSpring(scale2, { stiffness: 200, damping: 20 });
+  const smoothScaleOutOfView2 = useSpring(0.5, { stiffness: 300, damping: 30 });
+
+
+
+
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+
+  });
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+    if (inView) {
+      console.log('Element is in view');
+    } else {
+      console.log('Element is out of view');
+    }
+  }, [inView]);
 
-        if (rect.top <= windowHeight && rect.bottom >= 0) {
-          setTimeout(() => {
-            setExpanded(true);
-          }, 1500)
-        } else {
-          setExpanded(false);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [])
   return (
-    <>
+    <section className="circle-image">
+      <div ref={joker} className="container">
+        <motion.div
+          className="ring-wrapper"
+          style={{
+            scale: inView ? smoothScaleInView : smoothScaleOutOfView,
 
-      <section className={`circle-image ${expanded ? 'expanded' : ''}`} ref={sectionRef}>
-        <div className="container">
-          <div className>
+            // scale: inView ? smoothsca : 0.4,
+            transition: '0.5s ease',
+          }}
+          ref={ref} // Attach the ref to the element you want to observe
+        >
+          <div id="layer-1" className="ring layer-1">
+            <div className="cent_text">
+              <h2>
+                eCommerce-inspired checkout, marketing, and delivery for businesses.
+              </h2>
+              <p>
+                Revi drives new revenue and automatically markets to your customers while replacing
+                dozens of time-consuming tools. Oh, Revi does 0% commission delivery too.
+              </p>
+            </div>
+            <motion.div className="ring-display" style={{
+              scale: inView ? smoothScaleInView2 : smoothScaleOutOfView2,
 
-            <div className>
-              <div className={`ring-wrapper ${expanded ? 'expanded' : ''}`}>
-                <div id="layer-1" className={`ring layer-1 ${expanded ? 'expanded' : ''}`}>
-                  <div className={`cent_text ${expanded ? 'expanded' : ''}`}>
-                    <h2>eCommerce-inspired checkout, marketing, and delivery for businesses.</h2>
-                    <p>Revi drives new revenue and automatically markets to your customers while replacing
-                      dozens of time-consuming tools. Oh, Revi does 0% commission delivery too.</p>
-                  </div>
-                  <div className={`ring-display  ${expanded ? 'expanded' : ''}`}>
-                    {['Advertising', 'Ordering', 'Upsells', 'Rewards', 'Analytics', 'Texts', 'Coupons', 'Food Pics', 'CRM', 'Marketplace', 'Delivery', 'Menu'].map((text, index) => (
-                      <div key={index} className="label">
-                        <span>{text}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="interaction" />
+              // scale: inView ? smoothsca : 0.4,
+              transition: '1.1s ease',
+            }}
+              ref={ref} >
+              {['Advertising', 'Ordering', 'Upsells', 'Rewards', 'Analytics', 'Texts', 'Coupons', 'Food Pics', 'CRM', 'Marketplace', 'Delivery', 'Menu'].map((text, index) => (
+                <div key={index} className="label">
+                  <span>{text}</span>
                 </div>
-              </div >
-            </div >
-          </div >
-        </div >
-      </section >
-
-
-    </>
-  )
+              ))}
+            </motion.div>
+            <div className="interaction" />
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
