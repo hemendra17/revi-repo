@@ -1044,7 +1044,6 @@ section.checkout {
 /* carousel css start */
 section.carousel-sec {
   background: #1f3575;
-  padding: 110px 0px;
 }
 .c_img img {
   border: 8px solid #fff;
@@ -1074,10 +1073,8 @@ section.carousel-sec {
   margin-top: -45px;
 }
 .car-dots {
-  height: 400px;
-  width: 2px;
-  background: #324b88;
-  float: right;
+  background: white;
+  position: relative;
 }
 .car_cover {
   display: flex;
@@ -1938,4 +1935,77 @@ body {
 }
 .sunBannersec img#blueTree {
   z-index: 10;
+}
+
+/* this is for testing  start*/
+
+.crousalSec {
+  max-width: 100%;
+  position: relative;
+}
+
+.list {
+  list-style-type: none;
+  /* width: 100%;
+  height: 100%; */
+  overflow: hidden;
+  background: #1b3168;
+}
+
+.card {
+  overflow: hidden;
+  height: 100vh;
+}
+.cardOne {
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+}
+
+.card__inner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+.card__title {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.card__text {
+  color: white;
+}
+
+.slidePath {
+  width: 100%;
+  position: relative;
+}
+.slidePath__inner {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.dot {
+  position: fixed;
+  top: 150px;
+  right: 60px;
+  display: none;
+}
+
+ul.dot li {
+  width: 13px;
+  height: 13px;
+  background: #324b88;
+  border-radius: 50% !important;
+  left: -5px;
+  list-style: none;
+  margin-bottom: 32px;
+}
+ul.dot li.active {
+  background: #ffd74d;
 }
