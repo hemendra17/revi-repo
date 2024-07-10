@@ -31,8 +31,7 @@ const Carousel = lazy(() => import('./Carousel.jsx'));
 const CircleSection = lazy(() => import('./CircleSection.jsx'));
 const Boxsection = lazy(() => import('./Boxsection.jsx'));
 const Sectionbutton = lazy(() => import('./Sectionbutton.jsx'));
-const BackOnCome = lazy(() => import('./BackOnCome.jsx'));
-const Buttongrp = lazy(() => import('./Buttongrp.jsx'));
+
 const Team = lazy(() => import('./Team.jsx'));
 
 /**
@@ -114,8 +113,6 @@ export default function ({ config = {}, appConfig = {}, isMobile = false }) {
         <Sunbanner />
         <Revenue isMobile={isMobile} />
         <Sectionbutton />
-        <BackOnCome />
-        <Buttongrp />
         <Team />
         <CircleSection />
         <Boxsection />
