@@ -1749,6 +1749,9 @@ body {
   section.hero:before {
     background-size: 100% 40%;
   }
+  .sunBannersec img.sun {
+    left: 12px !important;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
@@ -1785,6 +1788,7 @@ body {
   .back-three {
     height: 100vh !important;
   }
+
 }
 
 @media (min-width: 821px) and (max-width: 991px) {
@@ -1806,6 +1810,7 @@ body {
   footer .container {
     background-size: 158%;
   }
+
 }
 /* ------------------------------------- Custom */
 .Topbanner-imageBox {
@@ -1945,7 +1950,7 @@ body {
 }
 .sunBannersec img.sun {
   top: 42px;
-  left: 2px;
+  left: 258px;
   width: unset;
   height: unset;
 }
@@ -1966,6 +1971,7 @@ body {
   height: 100%; */
   overflow: hidden;
   background: #1b3168;
+  margin-bottom: 0px;
 }
 
 .card {
@@ -2008,7 +2014,7 @@ body {
 
 ul.dot {
   position: fixed;
-  top: 240px;
+  top: 210px;
   right: 60px;
   display: none;
 }
