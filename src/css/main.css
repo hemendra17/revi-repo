@@ -1495,9 +1495,13 @@ body {
     padding-top: 0px;
   }
   section.hero {
-    /* height: 75vh; */
-    height: 100%;
+    height: 90vh;
+    /* height: 100%; */
   }
+  .Topbanner-imageBox .desktopSvg img {
+    width: 200px !important;
+    max-width: 100%;
+}
   .ban_left h1 {
     font-size: 32px !important;
   }
@@ -1672,6 +1676,11 @@ body {
     height: 333px;
     margin: 0 auto;
   }
+  section.circle-image {
+    background: #2020fd !important;
+    padding-top: 60px;
+    height: 44vh;
+  }
   .layer-1 {
     width: 401px;
     height: 333px;
@@ -1702,6 +1711,11 @@ body {
     top: auto;
     bottom: 0;
     width: 100%;
+  }
+  .team-single {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
   }
   .calltoaction {
     padding: 50px 0;
@@ -1802,7 +1816,7 @@ body {
 .Topbanner-imageBox .desktopSvg {
   position: absolute;
   top: 100px;
-  right: 16px;
+  right: 80px;
   z-index: 5;
 }
 .Topbanner-imageBox .desktopSvg img {
@@ -1931,7 +1945,7 @@ body {
 }
 .sunBannersec img.sun {
   top: 42px;
-  left: 258px;
+  left: 2px;
   width: unset;
   height: unset;
 }
@@ -1994,7 +2008,7 @@ body {
 
 ul.dot {
   position: fixed;
-  top: 150px;
+  top: 240px;
   right: 60px;
   display: none;
 }

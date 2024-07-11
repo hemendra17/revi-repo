@@ -9,7 +9,13 @@ export default function CircleSection() {
     offset: ['center start', 'start start',],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 0.6]);
+  // const scale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
+  // const scale2 = useTransform(scrollYProgress, [0, 1], [0.7, 0.9]);
+  // const smoothScaleInView = useSpring(scale, { stiffness: 200, damping: 20 });
+  // const smoothScaleOutOfView = useSpring(0.3, { stiffness: 300, damping: 30 });
+  // const smoothScaleInView2 = useSpring(scale2, { stiffness: 200, damping: 20 });
+  // const smoothScaleOutOfView2 = useSpring(0.5, { stiffness: 300, damping: 30 });
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 0.9]);
   const scale2 = useTransform(scrollYProgress, [0, 1], [0.7, 0.9]);
   const smoothScaleInView = useSpring(scale, { stiffness: 200, damping: 20 });
   const smoothScaleOutOfView = useSpring(0.3, { stiffness: 300, damping: 30 });
