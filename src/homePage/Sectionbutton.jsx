@@ -29,21 +29,21 @@ export default function Sectionbutton() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="btn_cover" onClick={() => handelClick(0)}>
-                <a href="#" >Reengage Alyssa to spend more at her favorite café.<img src={RightArrow} alt /></a>
+              <div className="btn_cover">
+                <a style={{ cursor: 'pointer' }} onClick={() => handelClick(0)}>Reengage Alyssa to spend more at her favorite café.<img src={RightArrow} alt /></a>
               </div>
               {
                 activeIndex === 0 && <BackOnCome />
               }
 
-              <div className="btn_cover" onClick={() => handelClick(1)}>
-                <a href="#" >Retain Naomi as a new customer with personal offers.<img src={RightArrow} alt /></a>
+              <div className="btn_cover">
+                <a style={{ cursor: 'pointer' }} onClick={() => handelClick(1)}>Retain Naomi as a new customer with personal offers.<img src={RightArrow} alt /></a>
               </div>
               {
                 activeIndex === 1 && <BackOnCome />
               }
-              <div className="btn_cover" onClick={() => handelClick(2)} >
-                <a href="#">Remind Tai about his go-to avo toast place downtown.<img src={RightArrow} alt /></a>
+              <div className="btn_cover"  >
+                <a style={{ cursor: 'pointer' }} onClick={() => handelClick(2)}>Remind Tai about his go-to avo toast place downtown.<img src={RightArrow} alt /></a>
               </div>
               {
                 activeIndex === 2 && <BackOnCome />
