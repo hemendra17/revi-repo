@@ -5,6 +5,16 @@ export default function Sectionbutton() {
 
 
   const [hoverindex, setHoverindex] = useState(null)
+
+  const [activeIndex, setActiveIndex] = useState(null)
+
+
+
+  const handelClick = (index) => {
+    setActiveIndex((pre) => (pre === index ? null : index))
+
+  }
+
   const handleMouseEnter = (index) => {
     setHoverindex(index)
   }
@@ -19,22 +29,30 @@ export default function Sectionbutton() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="btn_cover" onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={() => { handelMouseLeave() }}>
+              <div className="btn_cover" onClick={() => handelClick(0)}>
                 <a href="#" >Reengage Alyssa to spend more at her favorite café.<img src={RightArrow} alt /></a>
               </div>
-              <div className="btn_cover" onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={() => { handelMouseLeave() }}>
+              {
+                activeIndex === 0 && <BackOnCome />
+              }
+
+              <div className="btn_cover" onClick={() => handelClick(1)}>
                 <a href="#" >Retain Naomi as a new customer with personal offers.<img src={RightArrow} alt /></a>
               </div>
-              <div className="btn_cover" onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={() => { handelMouseLeave() }} >
-                <a href="#" onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={() => { handelMouseLeave() }}>Remind Tai about his go-to avo toast place downtown.<img src={RightArrow} alt /></a>
+              {
+                activeIndex === 1 && <BackOnCome />
+              }
+              <div className="btn_cover" onClick={() => handelClick(2)} >
+                <a href="#">Remind Tai about his go-to avo toast place downtown.<img src={RightArrow} alt /></a>
               </div>
+              {
+                activeIndex === 2 && <BackOnCome />
+              }
             </div>
           </div>
         </div>
       </section>
-      {
-        hoverindex !== null && <BackOnCome />
-      }
+
       {/* <section className="button">
   <div className="container">
     <div className="row">

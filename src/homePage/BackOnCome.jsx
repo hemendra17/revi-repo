@@ -8,7 +8,7 @@ export default function BackOnCome() {
     slidesToScroll: 1, // Number of slides to scroll
     autoplay: true, // Enable autoplay
     autoplaySpeed: 1500, // Autoplay speed in milliseconds
-
+    arrows: false
 
   };
 
