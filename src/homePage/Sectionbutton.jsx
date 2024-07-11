@@ -15,13 +15,6 @@ export default function Sectionbutton() {
 
   }
 
-  const handleMouseEnter = (index) => {
-    setHoverindex(index)
-  }
-
-  const handelMouseLeave = () => {
-    setHoverindex(null)
-  }
 
   return (
     <>
@@ -53,7 +46,8 @@ export default function Sectionbutton() {
         </div>
       </section>
 
-      {/* <section className="button">
+      {  /* 
+<section className="button">
   <div className="container">
     <div className="row">
       <div className="col-md-12">
@@ -63,7 +57,8 @@ export default function Sectionbutton() {
       </div>
     </div>
   </div>
-</section> */}
+</section>
+ */  }
 
     </>
   )

@@ -182,71 +182,6 @@ import { useInView } from 'framer-motion';
 gsap.registerPlugin(ScrollTrigger);
 
 const Carousel = () => {
-  const panelsRef = useRef([]);
-  const sliderwala = useRef(null);
-  const isInview = useInView(sliderwala, { amount: "all" })
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    let panels = gsap.utils.toArray(".card__content");
-
-    panels.forEach((item, i) => {
-      const contentElements = item.querySelectorAll(".card__inner > *");
-
-      gsap.set(contentElements, {
-        y: 0,
-        opacity: 0
-      });
-
-      ScrollTrigger.create({
-        trigger: item,
-        markers: false,
-        pin: true,
-        start: "top 50%",
-        end: "bottom 50%",
-        onEnter: ({ progress, direction, isActive }) => {
-          const dot = document.getElementById("luckry")
-          dot.style.display = 'block'
-          console.log("onEnter", progress, direction, isActive);
-          setCurrentIndex(i);
-          gsap.fromTo(contentElements, { y: 80, opacity: 0 }, { y: -80, opacity: 1, stagger: 0.05 });
-        },
-        onLeave: ({ progress, direction, isActive }) => {
-          const dot = document.getElementById("luckry")
-          dot.style.display = 'none';
-          console.log("onLeave", progress, direction, isActive);
-          gsap.fromTo(contentElements, { y: 0, opacity: 1 }, { y: -80, opacity: 0, stagger: 0.05 });
-        },
-        onLeaveBack: ({ progress, direction, isActive }) => {
-          const dot = document.getElementById("luckry")
-          dot.style.display = 'none'
-
-          console.log("onLeaveBack", progress, direction, isActive);
-          gsap.fromTo(contentElements, { y: 0, opacity: 1 }, { y: -80, opacity: 0, stagger: 0.05 });
-        },
-        onEnterBack: ({ progress, direction, isActive }) => {
-          const dot = document.getElementById("luckry")
-          dot.style.display = 'block'
-          setCurrentIndex(i);
-          console.log("onEnterBack", progress, direction, isActive);
-          gsap.fromTo(contentElements, { y: -80, opacity: 0 }, { y: -80, opacity: 1, stagger: 0.05 });
-        },
-        onUpdate: (self) => {
-          if (self.isActive) {
-            setCurrentIndex(i);
-          }
-        }
-      });
-    });
-
-
-
-
-
-
-  }, []);
-
-
 
 
 
@@ -286,24 +221,142 @@ const Carousel = () => {
     },
   ];
 
+
+
+
+
+  const panelsRef = useRef([]);
+  const sliderwala = useRef(null);
+  const isInview = useInView(sliderwala, { amount: "some" })
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    let panels = gsap.utils.toArray(".card__content");
+
+    panels.forEach((item, i) => {
+      const contentElements = item.querySelectorAll(".card__inner > *");
+
+      gsap.set(contentElements, {
+        y: 0,
+        opacity: 0
+      });
+
+      console.log('item', i, item)
+
+      ScrollTrigger.create({
+        trigger: item,
+        markers: false,
+        pin: true, toggleActions: 'play reverse play reverse',
+
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: ({ progress, direction, isActive }) => {
+          const dot = document.getElementById("luckry")
+          dot.style.display = 'block'
+          console.log("onEnter", progress, direction, isActive);
+          setCurrentIndex(i);
+          gsap.fromTo(contentElements, { y: 10, opacity: 0 }, { y: -10, opacity: 1, stagger: 0.05 });
+        },
+        onLeave: ({ progress, direction, isActive }) => {
+          const dot = document.getElementById("luckry")
+          dot.style.display = 'none';
+          console.log("onLeave", progress, direction, isActive);
+          gsap.fromTo(contentElements, { y: 0, opacity: 0 }, { y: -80, opacity: 0, stagger: 0.05 });
+        },
+        onLeaveBack: ({ progress, direction, isActive }) => {
+          const dot = document.getElementById("luckry")
+          dot.style.display = 'none'
+          console.log("onLeaveBack", progress, direction, isActive);
+          gsap.fromTo(contentElements, { y: 0, opacity: 0 }, { y: -80, opacity: 0, stagger: 0.05 });
+        },
+        onEnterBack: ({ progress, direction, isActive }) => {
+          const dot = document.getElementById("luckry")
+          dot.style.display = 'block'
+          setCurrentIndex(i);
+          console.log("onEnterBack", progress, direction, isActive);
+          gsap.fromTo(contentElements, { y: 0, opacity: 0 }, { y: -10, opacity: 1, stagger: 0.05 });
+        },
+        onUpdate: (self) => {
+          if (self.isActive) {
+            setCurrentIndex(i);
+          }
+        }
+
+
+
+      });
+    });
+
+
+
+
+  }, []);
+
+
+
+
+
+  useEffect(() => {
+
+
+    if (isInview) {
+
+      const handleKeyDown = (e) => {
+        const panels = gsap.utils.toArray(".card__content");
+        let newIndex = currentIndex;
+
+        if (e.key === 'ArrowUp') {
+          newIndex = Math.max(currentIndex - 1, 0);
+        } else if (e.key === 'ArrowDown') {
+          newIndex = Math.min(currentIndex + 1, slides.length - 1);
+        }
+
+        if (newIndex !== currentIndex) {
+          const prevContentElements = panels[currentIndex]?.querySelectorAll(".card__inner > *");
+          const newContentElements = panels[newIndex]?.querySelectorAll(".card__inner > *");
+
+          if (prevContentElements) {
+            gsap.fromTo(prevContentElements, { y: 80, opacity: 0 }, { y: -80, opacity: 0, stagger: 0.05 });
+          }
+          if (newContentElements) {
+            gsap.fromTo(newContentElements, { y: 0, opacity: 0 }, { y: -80, opacity: 0, stagger: 0.05 });
+          }
+
+          setCurrentIndex(newIndex);
+
+          const currentItem = sliderwala.current.querySelectorAll('.list__item')[newIndex];
+          if (currentItem) {
+            currentItem.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      };
+
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+
+    }
+
+  }, [currentIndex, isInview])
+
+
   return (
-    <section className="crousalSec" >
+    <section className="crousalSec" id='crouseal'>
       {/* <div className="container"> */}
 
       <ul className="list" ref={sliderwala}>
         {slides.map((slide, index) => (
           <li className="list__item">
             <article className="card">
-
               <section className="card__content">
-
                 <section className="card__inner">
                   <section className="slidePath">
-                    <div className="row d-flex">
-                      <div className='col-md-6'>
+                    <div className="row d-flex ">
+                      <div className='col-md-4'>
                         <img src={slide.image} alt={slide.title} />
                       </div>
-                      <div className='col-md-6'>
+                      <div className='col-md-8'>
                         <h1 className="card__title">{slide.title}</h1>
                         <p className="card__text">{slide.description}</p>
                       </div>
@@ -321,7 +374,7 @@ const Carousel = () => {
       {/* <div className="car-dots"> */}
       <ul className='dot' id='luckry'>
         {slides.map((slide, index) => {
-          return <li className={index === currentIndex ? 'active' : ''} key={index}></li>;
+          return <li className={index <= currentIndex ? 'active' : ''} key={index}></li>;
         })}
       </ul>
       {/* </div> */}

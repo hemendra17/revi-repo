@@ -92,6 +92,13 @@ function createRouting(appConfig) {
  * Main function. Handle routs.
  */
 function App() {
+
+
+
+
+
+
+	
 	// waiting for configs and styles loading
 	const [config, updateConfig] = useState(null);
 	// create child elements; will not recreated because of config will change only once

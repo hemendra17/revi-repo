@@ -3,13 +3,12 @@ import Slider from 'react-slick';
 export default function BackOnCome() {
   const settings = {
     infinite: true, // Infinite loop
-    speed: 1500, // Transition speed
+    speed: 500, // Transition speed
     slidesToShow: 1, // Number of slides to show at once
     slidesToScroll: 1, // Number of slides to scroll
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 1500, // Autoplay speed in milliseconds
+    autoplaySpeed: 2000, // Autoplay speed in milliseconds
     arrows: false
-
   };
 
   return (
